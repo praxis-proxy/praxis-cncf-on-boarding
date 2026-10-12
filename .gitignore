@@ -1,0 +1,8 @@
+.DS_Store
+*.tmp
+.env
+.env.*
+.vscode/
+ONBOARDING-STATUS.md
+__pycache__/
+scripts/__pycache__/

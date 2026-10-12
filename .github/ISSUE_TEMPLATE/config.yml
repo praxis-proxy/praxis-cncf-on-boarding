@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: CNCF Sandbox onboarding process
+    url: https://github.com/cncf/sandbox/issues/487
+    about: Reference onboarding checklist this repo is based on.

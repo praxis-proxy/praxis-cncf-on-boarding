@@ -1,0 +1,133 @@
+name: Sync checklist on issue close
+
+on:
+  issues:
+    types: [closed]
+
+permissions:
+  contents: write
+
+# Multiple issues can close at once (bulk-close in the UI, a loop of
+# `gh issue close`, a board automation, etc.), each firing its own run of
+# this workflow. Without serializing, concurrent runs can race pushing to
+# main and silently drop a checkbox update. Queue runs instead of canceling
+# them so every closed issue's update (and CNCF comment) lands.
+concurrency:
+  group: sync-checklist-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  sync-checklist:
+    runs-on: ubuntu-latest
+    # Fallback path for issues closed without a linked PR (or if the PR-link
+    # step didn't run). Ignore bot-authored issues to avoid loops.
+    if: >
+      contains(github.event.issue.labels.*.name, 'onboarding-item') &&
+      github.event.issue.user.type != 'Bot'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Find checklist slug from labels
+        id: slug
+        run: |
+          slug=$(echo '${{ toJson(github.event.issue.labels.*.name) }}' | jq -r '.[] | select(startswith("checklist:")) | sub("checklist:"; "")')
+          if [ -z "$slug" ]; then
+            echo "No checklist slug label found; skipping."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+          echo "found=true" >> "$GITHUB_OUTPUT"
+          echo "Syncing checklist item: $slug (issue #${{ github.event.issue.number }})"
+
+      - name: Mark checkbox complete and update progress
+        if: steps.slug.outputs.found == 'true'
+        id: update
+        env:
+          CHECKLIST_SLUG: ${{ steps.slug.outputs.slug }}
+        run: |
+          python3 scripts/checklist_tracking.py complete-checkbox --slug "${CHECKLIST_SLUG}"
+
+          if git diff --quiet ONBOARDING.md README.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Commit directly to main. Do not open a follow-up bot PR — that
+      # re-triggers pull_request workflows and produces approval/noise
+      # cascades. Commits made with GITHUB_TOKEN do not start new workflow runs.
+      - name: Commit checklist update to main
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ONBOARDING.md README.md
+          git commit -m "docs: mark onboarding item ${{ steps.slug.outputs.slug }} complete"
+          # Belt-and-suspenders alongside the concurrency group above: rebase
+          # onto main before pushing in case anything else advanced it.
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && break
+            echo "Push attempt ${attempt} failed; retrying..."
+            sleep $((attempt * 3))
+          done
+
+      # Post per-item progress to the external CNCF onboarding issue as items
+      # complete, rather than only at the very end. Requires:
+      #   1. .github/project-metadata.json to have onboarding_issue_url set
+      #      (written by ./scripts/bootstrap-issues.sh)
+      #   2. A CNCF_SANDBOX_TOKEN repo secret (a GitHub PAT with `public_repo`
+      #      scope is enough since cncf/sandbox is public) — GITHUB_TOKEN
+      #      cannot write to a different repository.
+      - name: Determine CNCF onboarding issue
+        if: steps.slug.outputs.found == 'true'
+        id: cncf_issue
+        run: |
+          if [ ! -f .github/project-metadata.json ]; then
+            echo "No .github/project-metadata.json; skipping CNCF comment."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          url="$(jq -r '.onboarding_issue_url // ""' .github/project-metadata.json)"
+          if [ -z "${url}" ]; then
+            echo "onboarding_issue_url not set; skipping CNCF comment."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          repo="$(echo "${url}" | sed -E 's#https://github.com/([^/]+/[^/]+)/issues/([0-9]+).*#\1#')"
+          number="$(echo "${url}" | sed -E 's#https://github.com/([^/]+/[^/]+)/issues/([0-9]+).*#\2#')"
+          if [ -z "${repo}" ] || [ -z "${number}" ]; then
+            echo "Could not parse onboarding_issue_url: ${url}"
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "repo=${repo}" >> "$GITHUB_OUTPUT"
+          echo "number=${number}" >> "$GITHUB_OUTPUT"
+          echo "found=true" >> "$GITHUB_OUTPUT"
+
+      - name: Generate item comment
+        if: steps.slug.outputs.found == 'true' && steps.cncf_issue.outputs.found == 'true'
+        run: |
+          python3 scripts/generate_item_comment.py \
+            --slug "${{ steps.slug.outputs.slug }}" \
+            --local-repo "${{ github.repository }}" \
+            --local-issue-number "${{ github.event.issue.number }}" \
+            --output /tmp/item-comment.md
+
+      - name: Post progress comment to CNCF onboarding issue
+        if: steps.slug.outputs.found == 'true' && steps.cncf_issue.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.CNCF_SANDBOX_TOKEN }}
+        run: |
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "CNCF_SANDBOX_TOKEN secret not set; skipping post. See CONTRIBUTING.md."
+            exit 0
+          fi
+          gh issue comment "${{ steps.cncf_issue.outputs.number }}" \
+            -R "${{ steps.cncf_issue.outputs.repo }}" \
+            --body-file /tmp/item-comment.md
+          echo "Posted progress update to ${{ steps.cncf_issue.outputs.repo }}#${{ steps.cncf_issue.outputs.number }}"
