@@ -288,7 +288,7 @@ _Link to footer on the site or README section._
 Document written, open governance in a `GOVERNANCE.md` file at the root of your repo.
 <!-- field-guide:end -->
 
-- [ ] Start a GOVERNANCE.md documenting open governance <!-- checklist:governance-doc --> (Issue: [#14](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/14))
+- [x] Start a GOVERNANCE.md documenting open governance <!-- checklist:governance-doc --> (PR: [#46](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/46))
 
 **Evidence:**
 
