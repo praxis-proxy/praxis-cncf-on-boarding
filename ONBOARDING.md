@@ -190,11 +190,11 @@ _Confirm joined._
 If your project has its own domain(s), transfer them to the CNCF. LF Contact: `projects@cncf.io`. Project Selection: CNCF.
 <!-- field-guide:end -->
 
-- [ ] Transfer project domain(s) to the CNCF <!-- checklist:domain-transfer --> (Issue: [#22](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/22))
+- [X] Transfer project domain(s) to the CNCF <!-- checklist:domain-transfer --> (Issue: [#22](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/22))
 
 **Evidence:**
 
-_Domain(s) transferred, or N/A if none._
+https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2?requestGroup=19
 
 ### artwork-pr
 
