@@ -268,7 +268,7 @@ Explicitly reference the CNCF Code of Conduct (or your adopted version) in the p
 
 **Evidence:**
 
-_Link to the README section._
+The [project README](https://github.com/praxis-proxy/praxis/blob/main/README.md#contributing) references the Code of Conduct, and [`CODE_OF_CONDUCT.md`](https://github.com/praxis-proxy/praxis/blob/main/CODE_OF_CONDUCT.md) explicitly adopts the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
 
 ### lf-footer
 
