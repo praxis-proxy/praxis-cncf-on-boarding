@@ -300,7 +300,7 @@ _Link to GOVERNANCE.md._
 Document a security policy in a `SECURITY.md` file at the root of your repo. See [CNCF security guidelines](https://contribute.cncf.io/maintainers/security/security-guidelines/#3-securitymd).
 <!-- field-guide:end -->
 
-- [x] Start a SECURITY.md security policy <!-- checklist:security-doc --> (Issue: [#13](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/13))
+- [x] Start a SECURITY.md security policy <!-- checklist:security-doc --> (PR: [#45](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/45))
 
 **Evidence:**
 
