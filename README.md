@@ -15,8 +15,8 @@ This repository helps you track and complete [CNCF Sandbox onboarding](https://g
 ## Onboarding progress
 
 <!-- checklist-progress:start -->
-> **Onboarding progress:** **2 / 36** items complete (6%)  
-> `█░░░░░░░░░░░░░░░░░░░` 6%
+> **Onboarding progress:** **3 / 36** items complete (8%)  
+> `██░░░░░░░░░░░░░░░░░░` 8%
 <!-- checklist-progress:end -->
 
 ## Onboarding checklist
@@ -38,7 +38,7 @@ Each row links to the matching section in [ONBOARDING.md](ONBOARDING.md). A PR w
 - ⬜ [Accept the invite to join the CNCF GitHub Enterprise account](ONBOARDING.md#ghe-invite-accepted) (Issue: [#25](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/25))
 - ✅ [Migrate Slack channels to the Kubernetes or CNCF Slack workspace](ONBOARDING.md#slack-migration) (PR: [#41](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/41))
 - ⬜ [Join the #maintainers-circle Slack channel](ONBOARDING.md#maintainers-circle-slack) (Issue: [#23](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/23))
-- ⬜ [Transfer project domain(s) to the CNCF](ONBOARDING.md#domain-transfer) (Issue: [#22](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/22))
+- ✅ [Transfer project domain(s) to the CNCF](ONBOARDING.md#domain-transfer) (PR: [#42](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/42))
 - ⬜ [Submit a pull request with your artwork](ONBOARDING.md#artwork-pr) (Issue: [#21](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/21))
 - ⬜ [Transfer website analytics to the CNCF](ONBOARDING.md#analytics-transfer) (Issue: [#20](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/20))
 - ⬜ [Create a maintainer list and add it to the aggregated CNCF maintainer list](ONBOARDING.md#maintainer-list-pr) (Issue: [#19](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/19))
