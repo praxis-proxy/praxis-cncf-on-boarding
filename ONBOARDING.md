@@ -178,11 +178,11 @@ Channel exists already https://cloud-native.slack.com/archives/C0BK0RSP5RC
 Join `#maintainers-circle` on CNCF Slack to find and share knowledge with other project teams.
 <!-- field-guide:end -->
 
-- [ ] Join the #maintainers-circle Slack channel <!-- checklist:maintainers-circle-slack --> (Issue: [#23](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/23))
+- [X] Join the #maintainers-circle Slack channel <!-- checklist:maintainers-circle-slack --> (PR: [#49](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/49))
 
 **Evidence:**
 
-_Confirm joined._
+Joined `#maintainers-circle` on CNCF Slack: https://cloud-native.slack.com/archives/C014YQ8CDCG/p1791906432352529
 
 ### domain-transfer
 
