@@ -18,11 +18,11 @@ A signed Project Contribution Agreement and trademark transfer are required **be
 Review the [CNCF IP Policy](https://github.com/cncf/foundation/blob/main/charter.md#11-ip-policy). Ensure the project uses a CNCF-compatible license — inbound projects must use **Apache 2.0**. (Dependency licenses are tracked separately in `license-scan-import`.)
 <!-- field-guide:end -->
 
-- [ ] Review and understand the CNCF IP Policy <!-- checklist:ip-policy-review --> (Issue: [#36](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/36))
+- [X] Review and understand the CNCF IP Policy <!-- checklist:ip-policy-review --> (Issue: [#36](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/36))
 
 **Evidence:**
 
-_Confirm license is Apache 2.0 and link to the LICENSE file._
+All licenses are Apache 2.0
 
 ### license-policy-review
 
@@ -30,11 +30,11 @@ _Confirm license is Apache 2.0 and link to the LICENSE file._
 Review the [CNCF Allowlist License Policy](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md). This governs licenses used by third-party dependencies. CNCF FOSSA or CNCF Snyk can check compliance — pick one (tracked in `license-scan-import`).
 <!-- field-guide:end -->
 
-- [ ] Review and understand the CNCF Third Party License Policy <!-- checklist:license-policy-review --> (Issue: [#35](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/35))
+- [x] Review and understand the CNCF Third Party License Policy <!-- checklist:license-policy-review --> (Issue: [#35](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/35))
 
 **Evidence:**
 
-_Note which scanning service you'll use (FOSSA or Snyk)._
+FOSSA
 
 ### trademark-guidelines-review
 
@@ -42,11 +42,11 @@ _Note which scanning service you'll use (FOSSA or Snyk)._
 Review the [Linux Foundation trademark guidelines](https://www.linuxfoundation.org/trademark-usage/). Let the TOC know if you plan to change your project name.
 <!-- field-guide:end -->
 
-- [ ] Review and understand the LF trademark guidelines <!-- checklist:trademark-guidelines-review --> (Issue: [#34](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/34))
+- [X] Review and understand the LF trademark guidelines <!-- checklist:trademark-guidelines-review --> (Issue: [#34](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/34))
 
 **Evidence:**
 
-_Confirm review complete; note any planned name change (or N/A)._
+No name changes planned
 
 ### trademark-transfer
 
