@@ -178,11 +178,11 @@ Channel exists already https://cloud-native.slack.com/archives/C0BK0RSP5RC
 Join `#maintainers-circle` on CNCF Slack to find and share knowledge with other project teams.
 <!-- field-guide:end -->
 
-- [ ] Join the #maintainers-circle Slack channel <!-- checklist:maintainers-circle-slack --> (Issue: [#23](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/23))
+- [X] Join the #maintainers-circle Slack channel <!-- checklist:maintainers-circle-slack --> (PR: [#49](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/49))
 
 **Evidence:**
 
-_Confirm joined._
+Joined `#maintainers-circle` on CNCF Slack: https://cloud-native.slack.com/archives/C014YQ8CDCG/p1791906432352529
 
 ### domain-transfer
 
@@ -264,11 +264,11 @@ All
 Explicitly reference the CNCF Code of Conduct (or your adopted version) in the project's `README.md` on GitHub.
 <!-- field-guide:end -->
 
-- [ ] Reference the CNCF Code of Conduct in README.md <!-- checklist:coc-in-readme --> (Issue: [#16](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/16))
+- [x] Reference the CNCF Code of Conduct in README.md <!-- checklist:coc-in-readme --> (PR: [#48](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/48))
 
 **Evidence:**
 
-_Link to the README section._
+The [project README](https://github.com/praxis-proxy/praxis/blob/main/README.md#contributing) references the Code of Conduct, and [`CODE_OF_CONDUCT.md`](https://github.com/praxis-proxy/praxis/blob/main/CODE_OF_CONDUCT.md) explicitly adopts the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
 
 ### lf-footer
 
@@ -288,11 +288,11 @@ _Link to footer on the site or README section._
 Document written, open governance in a `GOVERNANCE.md` file at the root of your repo.
 <!-- field-guide:end -->
 
-- [ ] Start a GOVERNANCE.md documenting open governance <!-- checklist:governance-doc --> (Issue: [#14](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/14))
+- [x] Start a GOVERNANCE.md documenting open governance <!-- checklist:governance-doc --> (PR: [#46](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/46))
 
 **Evidence:**
 
-_Link to GOVERNANCE.md._
+https://github.com/praxis-proxy/praxis/blob/main/GOVERNANCE.md
 
 ### security-doc
 
@@ -300,11 +300,11 @@ _Link to GOVERNANCE.md._
 Document a security policy in a `SECURITY.md` file at the root of your repo. See [CNCF security guidelines](https://contribute.cncf.io/maintainers/security/security-guidelines/#3-securitymd).
 <!-- field-guide:end -->
 
-- [ ] Start a SECURITY.md security policy <!-- checklist:security-doc --> (Issue: [#13](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/13))
+- [x] Start a SECURITY.md security policy <!-- checklist:security-doc --> (PR: [#45](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/45))
 
 **Evidence:**
 
-_Link to SECURITY.md._
+https://github.com/praxis-proxy/praxis/blob/main/SECURITY.md
 
 ### openssf-badge
 
