@@ -15,8 +15,8 @@ This repository helps you track and complete [CNCF Sandbox onboarding](https://g
 ## Onboarding progress
 
 <!-- checklist-progress:start -->
-> **Onboarding progress:** **7 / 36** items complete (19%)  
-> `████░░░░░░░░░░░░░░░░` 19%
+> **Onboarding progress:** **8 / 36** items complete (22%)  
+> `████░░░░░░░░░░░░░░░░` 22%
 <!-- checklist-progress:end -->
 
 ## Onboarding checklist
@@ -44,7 +44,7 @@ Each row links to the matching section in [ONBOARDING.md](ONBOARDING.md). A PR w
 - ⬜ [Create a maintainer list and add it to the aggregated CNCF maintainer list](ONBOARDING.md#maintainer-list-pr) (Issue: [#19](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/19))
 - ⬜ [Provide maintainer emails for mailing list and Service Desk access](ONBOARDING.md#maintainer-emails) (Issue: [#18](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/18))
 - ✅ [Ensure the DCO app is enabled for all project GitHub repositories](ONBOARDING.md#dco-enabled) (PR: [#44](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/44))
-- ⬜ [Reference the CNCF Code of Conduct in README.md](ONBOARDING.md#coc-in-readme) (Issue: [#16](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/16))
+- ✅ [Reference the CNCF Code of Conduct in README.md](ONBOARDING.md#coc-in-readme) (PR: [#48](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/48))
 - ⬜ [Add the LF footer to your website (or README if no website)](ONBOARDING.md#lf-footer) (Issue: [#15](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/15))
 - ⬜ [Start a GOVERNANCE.md documenting open governance](ONBOARDING.md#governance-doc) (Issue: [#14](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/14))
 - ⬜ [Start a SECURITY.md security policy](ONBOARDING.md#security-doc) (Issue: [#13](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/13))

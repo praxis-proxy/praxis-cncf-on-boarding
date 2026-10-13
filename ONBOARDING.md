@@ -264,7 +264,7 @@ All
 Explicitly reference the CNCF Code of Conduct (or your adopted version) in the project's `README.md` on GitHub.
 <!-- field-guide:end -->
 
-- [ ] Reference the CNCF Code of Conduct in README.md <!-- checklist:coc-in-readme --> (Issue: [#16](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/16))
+- [x] Reference the CNCF Code of Conduct in README.md <!-- checklist:coc-in-readme --> (PR: [#48](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/48))
 
 **Evidence:**
 
