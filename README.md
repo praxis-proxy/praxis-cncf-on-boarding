@@ -48,6 +48,7 @@ Each row links to the matching section in [ONBOARDING.md](ONBOARDING.md). A PR w
 - ⬜ [Add the LF footer to your website (or README if no website)](ONBOARDING.md#lf-footer) (Issue: [#15](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/15))
 - ✅ [Start a GOVERNANCE.md documenting open governance](ONBOARDING.md#governance-doc) (PR: [#46](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/46))
 - ⬜ [Start a SECURITY.md security policy](ONBOARDING.md#security-doc) (Issue: [#13](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/13))
+- ✅ [Start an OpenSSF Best Practices Badge](ONBOARDING.md#openssf-badge) (PR: [#47](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/47))
 - ⬜ [Start a GOVERNANCE.md documenting open governance](ONBOARDING.md#governance-doc) (Issue: [#14](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/14))
 - ✅ [Start a SECURITY.md security policy](ONBOARDING.md#security-doc) (PR: [#45](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/45))
 - ⬜ [Start an OpenSSF Best Practices Badge](ONBOARDING.md#openssf-badge) (Issue: [#12](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/12))

@@ -312,11 +312,11 @@ https://github.com/praxis-proxy/praxis/blob/main/SECURITY.md
 Register and begin working toward an [OpenSSF Best Practices Badge](https://www.bestpractices.dev/).
 <!-- field-guide:end -->
 
-- [ ] Start an OpenSSF Best Practices Badge <!-- checklist:openssf-badge --> (Issue: [#12](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/12))
+- [x] Start an OpenSSF Best Practices Badge <!-- checklist:openssf-badge --> (PR: [#47](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/47))
 
 **Evidence:**
 
-_Link to the badge page/status._
+Registered and passing (100%): https://www.bestpractices.dev/projects/13756
 
 ### license-scan-import
 
