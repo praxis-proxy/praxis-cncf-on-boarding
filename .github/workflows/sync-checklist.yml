@@ -6,12 +6,11 @@ on:
 
 permissions:
   contents: write
+  pull-requests: read
 
-# Multiple issues can close at once (bulk-close in the UI, a loop of
-# `gh issue close`, a board automation, etc.), each firing its own run of
-# this workflow. Without serializing, concurrent runs can race pushing to
-# main and silently drop a checkbox update. Queue runs instead of canceling
-# them so every closed issue's update (and CNCF comment) lands.
+# Multiple issues can close at once (bulk-close in the UI, a merged PR with
+# several Closes #N, etc.), each firing its own run. Serialize with the
+# merge-time sync workflow so concurrent pushes to main do not drop updates.
 concurrency:
   group: sync-checklist-${{ github.repository }}
   cancel-in-progress: false
@@ -19,8 +18,8 @@ concurrency:
 jobs:
   sync-checklist:
     runs-on: ubuntu-latest
-    # Fallback path for issues closed without a linked PR (or if the PR-link
-    # step didn't run). Ignore bot-authored issues to avoid loops.
+    # Per-issue path: staff/direct closes, and CNCF comments after a merge.
+    # Ignore bot-authored issues to avoid loops.
     if: >
       contains(github.event.issue.labels.*.name, 'onboarding-item') &&
       github.event.issue.user.type != 'Bot'
@@ -44,13 +43,58 @@ jobs:
           echo "found=true" >> "$GITHUB_OUTPUT"
           echo "Syncing checklist item: $slug (issue #${{ github.event.issue.number }})"
 
+      - name: Resolve closing pull request (if any)
+        if: steps.slug.outputs.found == 'true'
+        id: closer
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          set -euo pipefail
+          pr="$(gh api graphql -f query='
+            query($owner:String!,$name:String!,$number:Int!) {
+              repository(owner:$owner,name:$name) {
+                issue(number:$number) {
+                  timelineItems(itemTypes:[CLOSED_EVENT], last:1) {
+                    nodes {
+                      ... on ClosedEvent {
+                        closer { ... on PullRequest { number } }
+                      }
+                    }
+                  }
+                }
+              }
+            }' -f owner="${REPO%/*}" -f name="${REPO#*/}" -F number="${ISSUE}" \
+            --jq '.data.repository.issue.timelineItems.nodes[0].closer.number // empty')"
+          if [ -n "${pr}" ]; then
+            echo "pr=${pr}" >> "$GITHUB_OUTPUT"
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "Issue #${ISSUE} was closed by PR #${pr}"
+          else
+            echo "pr=" >> "$GITHUB_OUTPUT"
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "No closing PR for issue #${ISSUE} (direct/staff close)"
+          fi
+
       - name: Mark checkbox complete and update progress
         if: steps.slug.outputs.found == 'true'
         id: update
         env:
           CHECKLIST_SLUG: ${{ steps.slug.outputs.slug }}
+          REPO: ${{ github.repository }}
+          ISSUE: ${{ github.event.issue.number }}
+          PR: ${{ steps.closer.outputs.pr }}
         run: |
-          python3 scripts/checklist_tracking.py complete-checkbox --slug "${CHECKLIST_SLUG}"
+          set -euo pipefail
+          if [ -n "${PR}" ]; then
+            python3 scripts/checklist_tracking.py link-pr \
+              --repo "${REPO}" \
+              --pr-number "${PR}" \
+              --issue-numbers "${ISSUE}"
+          else
+            python3 scripts/checklist_tracking.py complete-checkbox --slug "${CHECKLIST_SLUG}"
+          fi
 
           if git diff --quiet ONBOARDING.md README.md; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
