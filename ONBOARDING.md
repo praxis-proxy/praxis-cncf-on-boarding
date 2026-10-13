@@ -42,7 +42,7 @@ FOSSA
 Review the [Linux Foundation trademark guidelines](https://www.linuxfoundation.org/trademark-usage/). Let the TOC know if you plan to change your project name.
 <!-- field-guide:end -->
 
-- [X] Review and understand the LF trademark guidelines <!-- checklist:trademark-guidelines-review --> (Issue: [#34](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/34))
+- [X] Review and understand the LF trademark guidelines <!-- checklist:trademark-guidelines-review --> (PR: [#43](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/43))
 
 **Evidence:**
 

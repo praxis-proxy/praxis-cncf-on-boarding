@@ -15,8 +15,8 @@ This repository helps you track and complete [CNCF Sandbox onboarding](https://g
 ## Onboarding progress
 
 <!-- checklist-progress:start -->
-> **Onboarding progress:** **3 / 36** items complete (8%)  
-> `██░░░░░░░░░░░░░░░░░░` 8%
+> **Onboarding progress:** **6 / 36** items complete (17%)  
+> `███░░░░░░░░░░░░░░░░░` 17%
 <!-- checklist-progress:end -->
 
 ## Onboarding checklist
@@ -24,9 +24,9 @@ This repository helps you track and complete [CNCF Sandbox onboarding](https://g
 Each row links to the matching section in [ONBOARDING.md](ONBOARDING.md). A PR with `Closes #N` checks the box and switches `(Issue: …)` to `(PR: …)` automatically — do not edit these lines by hand.
 
 <!-- onboarding-dashboard:start -->
-- ⬜ [Review and understand the CNCF IP Policy](ONBOARDING.md#ip-policy-review) (Issue: [#36](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/36))
-- ⬜ [Review and understand the CNCF Third Party License Policy](ONBOARDING.md#license-policy-review) (Issue: [#35](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/35))
-- ⬜ [Review and understand the LF trademark guidelines](ONBOARDING.md#trademark-guidelines-review) (Issue: [#34](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/34))
+- ✅ [Review and understand the CNCF IP Policy](ONBOARDING.md#ip-policy-review) (Issue: [#36](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/36))
+- ✅ [Review and understand the CNCF Third Party License Policy](ONBOARDING.md#license-policy-review) (Issue: [#35](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/35))
+- ✅ [Review and understand the LF trademark guidelines](ONBOARDING.md#trademark-guidelines-review) (PR: [#43](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/43))
 - ⬜ [Transfer trademark and logo assets to the Linux Foundation](ONBOARDING.md#trademark-transfer) (Issue: [#33](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/33))
 - ⬜ [Review the Technical Leadership Principles](ONBOARDING.md#technical-leadership-principles) (Issue: [#32](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/32))
 - ⬜ [Review the project proposal process and requirements](ONBOARDING.md#project-proposal-process) (Issue: [#31](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/31))
