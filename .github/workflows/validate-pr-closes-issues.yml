@@ -47,10 +47,11 @@ jobs:
                 '',
                 'This PR does not reference any checklist issues with closing keywords.',
                 '',
-                'To automatically check the box and link this PR, add one of the following to the PR description:',
+                'After merge, automation checks the box and links this PR. Add one keyword per issue:',
                 '',
                 '```',
                 'Closes #123',
+                'Closes #456',
                 '```',
                 '',
                 'See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow.'

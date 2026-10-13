@@ -6,7 +6,7 @@ and holds the only progress indicator. Checklist lines look like:
 
     - [ ] Title <!-- checklist:slug --> (Issue: [#12](https://github.com/org/repo/issues/12))
 
-After a PR with `Closes #12` is opened, the line becomes:
+After a PR with `Closes #12` merges, the line becomes:
 
     - [x] Title <!-- checklist:slug --> (PR: [#34](https://github.com/org/repo/pull/34))
 """
@@ -115,9 +115,35 @@ def load_issue_registry(path: Path) -> Dict[str, int]:
     return {k: int(v) for k, v in data.get("issues", {}).items()}
 
 
+_CLOSING_KEYWORD = re.compile(
+    r"\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\b",
+    re.IGNORECASE,
+)
+
+
 def parse_closing_issues(text: str) -> List[int]:
-    pattern = re.compile(r"\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)", re.IGNORECASE)
-    return sorted({int(m.group(1)) for m in pattern.finditer(text or "")})
+    """Return issue numbers referenced with GitHub closing keywords.
+
+    Supports one keyword per issue (GitHub's native form) and comma-separated
+    lists on the same line after a keyword, e.g. ``Closes #1, #2, #3``.
+    """
+    if not text:
+        return []
+    numbers: set[int] = set()
+    for line in text.splitlines():
+        match = _CLOSING_KEYWORD.search(line)
+        if not match:
+            continue
+        for num in re.findall(r"#(\d+)", line[match.start() :]):
+            numbers.add(int(num))
+    # Also catch inline forms that aren't alone on a line boundary edge case.
+    for num in re.findall(
+        r"\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)",
+        text,
+        flags=re.IGNORECASE,
+    ):
+        numbers.add(int(num))
+    return sorted(numbers)
 
 
 def slug_complete(content: str, slug: str) -> bool:
@@ -229,7 +255,7 @@ def update_files_for_pr(root: Path, repo: str, pr_number: int, issue_numbers: Li
         slug = slug_for_issue(registry, issue_number)
         if not slug:
             continue
-        # Closes #N is enough: swap Issue -> PR and check the box in one step.
+        # After merge: swap Issue -> PR and check the box in one step.
         content = apply_pr_link(content, slug, pr_number, repo)
         content = mark_checkbox_complete(content, slug)
         changed_slugs.append(slug)
