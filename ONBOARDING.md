@@ -252,11 +252,11 @@ _Date emailed; confirm LF profile linking._
 Enable the [DCO GitHub App](https://github.com/apps/dco) on every repo in scope. A CLA may be used in addition to the DCO, not instead of it.
 <!-- field-guide:end -->
 
-- [ ] Ensure the DCO app is enabled for all project GitHub repositories <!-- checklist:dco-enabled --> (Issue: [#17](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/17))
+- [x] Ensure the DCO app is enabled for all project GitHub repositories <!-- checklist:dco-enabled --> (Issue: [#17](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/17))
 
 **Evidence:**
 
-_List repos with DCO enabled._
+All
 
 ### coc-in-readme
 
