@@ -142,7 +142,7 @@ _Meeting date, or N/A if not needed._
 This makes the project transferable to the CNCF's GitHub Enterprise account. If it's already in another GitHub Enterprise account, remove it from there first.
 <!-- field-guide:end -->
 
-- [x] Move the project to its own separate neutral GitHub organization <!-- checklist:neutral-github-org --> (Issue: [#26](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/26))
+- [x] Move the project to its own separate neutral GitHub organization <!-- checklist:neutral-github-org --> (PR: [#38](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/38))
 
 **Evidence:**
 
