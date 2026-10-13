@@ -316,7 +316,7 @@ Register and begin working toward an [OpenSSF Best Practices Badge](https://www.
 
 **Evidence:**
 
-_Link to the badge page/status._
+Registered and passing (100%): https://www.bestpractices.dev/projects/13756
 
 ### license-scan-import
 
