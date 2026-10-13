@@ -292,7 +292,7 @@ Document written, open governance in a `GOVERNANCE.md` file at the root of your 
 
 **Evidence:**
 
-_Link to GOVERNANCE.md._
+https://github.com/praxis-proxy/praxis/blob/main/GOVERNANCE.md
 
 ### security-doc
 
