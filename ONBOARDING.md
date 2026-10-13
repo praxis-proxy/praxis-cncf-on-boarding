@@ -166,11 +166,11 @@ _Date invite accepted._
 CNCF staff can help. This improves discoverability, lets CNCF enforce its Code of Conduct, and enables unlimited message retention. If you already have a large Slack/Discord community, CNCF may instead link to it from a pointer channel in the CNCF Slack workspace.
 <!-- field-guide:end -->
 
-- [ ] Migrate Slack channels to the Kubernetes or CNCF Slack workspace <!-- checklist:slack-migration --> (Issue: [#24](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/24))
+- [x] Migrate Slack channels to the Kubernetes or CNCF Slack workspace <!-- checklist:slack-migration --> (Issue: [#24](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/24))
 
 **Evidence:**
 
-_Migration status or link to pointer channel._
+Praxis is already in the CNCF Slack
 
 ### maintainers-circle-slack
 
