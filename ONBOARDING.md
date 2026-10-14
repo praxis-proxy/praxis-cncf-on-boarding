@@ -30,7 +30,7 @@ All licenses are Apache 2.0
 Review the [CNCF Allowlist License Policy](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md). This governs licenses used by third-party dependencies. CNCF FOSSA or CNCF Snyk can check compliance — pick one (tracked in `license-scan-import`).
 <!-- field-guide:end -->
 
-- [x] Review and understand the CNCF Third Party License Policy <!-- checklist:license-policy-review --> (Issue: [#35](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/35))
+- [x] Review and understand the CNCF Third Party License Policy <!-- checklist:license-policy-review --> (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
 
 **Evidence:**
 
@@ -54,7 +54,7 @@ No name changes planned
 Transfer any existing trademark and logo assets to the Linux Foundation via the Project Contribution Agreement. CNCF staff sends this document to the contact emails listed in your Sandbox application.
 <!-- field-guide:end -->
 
-- [x] Transfer trademark and logo assets to the Linux Foundation <!-- checklist:trademark-transfer --> (Issue: [#33](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/33))
+- [x] Transfer trademark and logo assets to the Linux Foundation <!-- checklist:trademark-transfer --> (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
 
 **Evidence:**
 
@@ -68,7 +68,7 @@ Trademarks done, no logos yet.
 Read the [Technical Leadership Principles](https://contribute.cncf.io/maintainers/community/leadership-principles/), which outline expected behavior for maintainers in leadership roles.
 <!-- field-guide:end -->
 
-- [x] Review the Technical Leadership Principles <!-- checklist:technical-leadership-principles --> (Issue: [#32](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/32))
+- [x] Review the Technical Leadership Principles <!-- checklist:technical-leadership-principles --> (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
 
 **Evidence:**
 
@@ -80,7 +80,7 @@ read it
 Read the [CNCF project proposal process and requirements](https://github.com/cncf/toc/blob/main/process/README.md).
 <!-- field-guide:end -->
 
-- [x] Review the project proposal process and requirements <!-- checklist:project-proposal-process --> (Issue: [#31](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/31))
+- [x] Review the project proposal process and requirements <!-- checklist:project-proposal-process --> (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
 
 **Evidence:**
 
@@ -104,7 +104,7 @@ _Notes or links here._
 Read the CNCF online program guidelines (webinars, meetups, events) provided by CNCF staff.
 <!-- field-guide:end -->
 
-- [x] Review the online program guidelines <!-- checklist:online-program-guidelines --> (Issue: [#29](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/29))
+- [x] Review the online program guidelines <!-- checklist:online-program-guidelines --> (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
 
 **Evidence:**
 
@@ -116,7 +116,7 @@ done
 Read the CNCF telemetry data collection and usage policy.
 <!-- field-guide:end -->
 
-- [x] Review the telemetry data collection and usage policy <!-- checklist:telemetry-policy-review --> (Issue: [#28](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/28))
+- [x] Review the telemetry data collection and usage policy <!-- checklist:telemetry-policy-review --> (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
 
 **Evidence:**
 

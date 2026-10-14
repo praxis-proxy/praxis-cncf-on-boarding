@@ -15,8 +15,8 @@ This repository helps you track and complete [CNCF Sandbox onboarding](https://g
 ## Onboarding progress
 
 <!-- checklist-progress:start -->
-> **Onboarding progress:** **17 / 37** items complete (46%)  
-> `█████████░░░░░░░░░░░` 46%
+> **Onboarding progress:** **22 / 37** items complete (59%)  
+> `████████████░░░░░░░░` 59%
 <!-- checklist-progress:end -->
 
 ## Onboarding checklist
@@ -25,14 +25,14 @@ Each row links to the matching section in [ONBOARDING.md](ONBOARDING.md). A PR w
 
 <!-- onboarding-dashboard:start -->
 - ✅ [Review and understand the CNCF IP Policy](ONBOARDING.md#ip-policy-review) (Issue: [#36](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/36))
-- ⬜ [Review and understand the CNCF Third Party License Policy](ONBOARDING.md#license-policy-review) (Issue: [#35](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/35))
+- ✅ [Review and understand the CNCF Third Party License Policy](ONBOARDING.md#license-policy-review) (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
 - ✅ [Review and understand the LF trademark guidelines](ONBOARDING.md#trademark-guidelines-review) (PR: [#43](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/43))
-- ✅ [Transfer trademark and logo assets to the Linux Foundation](ONBOARDING.md#trademark-transfer) (Issue: [#33](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/33))
-- ⬜ [Review the Technical Leadership Principles](ONBOARDING.md#technical-leadership-principles) (Issue: [#32](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/32))
-- ⬜ [Review the project proposal process and requirements](ONBOARDING.md#project-proposal-process) (Issue: [#31](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/31))
+- ✅ [Transfer trademark and logo assets to the Linux Foundation](ONBOARDING.md#trademark-transfer) (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
+- ✅ [Review the Technical Leadership Principles](ONBOARDING.md#technical-leadership-principles) (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
+- ✅ [Review the project proposal process and requirements](ONBOARDING.md#project-proposal-process) (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
 - ⬜ [Review services available for your project at the CNCF](ONBOARDING.md#cncf-services-review) (Issue: [#30](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/30))
-- ⬜ [Review the online program guidelines](ONBOARDING.md#online-program-guidelines) (Issue: [#29](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/29))
-- ⬜ [Review the telemetry data collection and usage policy](ONBOARDING.md#telemetry-policy-review) (Issue: [#28](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/28))
+- ✅ [Review the online program guidelines](ONBOARDING.md#online-program-guidelines) (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
+- ✅ [Review the telemetry data collection and usage policy](ONBOARDING.md#telemetry-policy-review) (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
 - ⬜ [Optional: book time with CNCF staff](ONBOARDING.md#cncf-staff-office-hours) (Issue: [#27](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/27))
 - ✅ [Move the project to its own separate neutral GitHub organization](ONBOARDING.md#neutral-github-org) (PR: [#38](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/38))
 - ⬜ [Accept the invite to join the CNCF GitHub Enterprise account](ONBOARDING.md#ghe-invite-accepted) (Issue: [#25](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/25))
