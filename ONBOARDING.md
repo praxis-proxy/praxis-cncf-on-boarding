@@ -228,7 +228,7 @@ _Notes or links here._
 Create or ensure your [`.project` repo](https://contribute.cncf.io/blog/2026/04/22/introducing-dot-project-for-maintainers) is up to date with maintainer information.
 <!-- field-guide:end -->
 
-- [x] Create or update the .project repo with maintainer information <!-- checklist:dot-project-repo --> (Issue: [#53](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/53))
+- [x] Create or update the .project repo with maintainer information <!-- checklist:dot-project-repo --> (PR: [#59](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/59))
 
 **Evidence:**
 
