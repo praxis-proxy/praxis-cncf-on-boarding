@@ -142,7 +142,7 @@ _Notes or links here._
 This makes the project transferable to the CNCF's GitHub Enterprise account. If it's already in another GitHub Enterprise account, remove it from there first.
 <!-- field-guide:end -->
 
-- [ ] Move the project to its own separate neutral GitHub organization <!-- checklist:neutral-github-org --> (PR: [#38](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/38))
+- [x] Move the project to its own separate neutral GitHub organization <!-- checklist:neutral-github-org --> (PR: [#38](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/38))
 
 **Evidence:**
 
@@ -178,7 +178,7 @@ Channel exists already https://cloud-native.slack.com/archives/C0BK0RSP5RC
 Join `#maintainers-circle` on CNCF Slack to find and share knowledge with other project teams.
 <!-- field-guide:end -->
 
-- [ ] Join the #maintainers-circle Slack channel <!-- checklist:maintainers-circle-slack --> (PR: [#49](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/49))
+- [x] Join the #maintainers-circle Slack channel <!-- checklist:maintainers-circle-slack --> (PR: [#49](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/49))
 
 **Evidence:**
 
@@ -190,7 +190,7 @@ Joined `#maintainers-circle` on CNCF Slack: https://cloud-native.slack.com/archi
 If your project has its own domain(s), transfer them to the CNCF. LF Contact: `projects@cncf.io`. Project Selection: CNCF.
 <!-- field-guide:end -->
 
-- [ ] Transfer project domain(s) to the CNCF <!-- checklist:domain-transfer --> (PR: [#42](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/42))
+- [x] Transfer project domain(s) to the CNCF <!-- checklist:domain-transfer --> (PR: [#42](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/42))
 
 **Evidence:**
 
@@ -252,7 +252,7 @@ _Notes or links here._
 Enable the [DCO GitHub App](https://github.com/apps/dco) on every repo in scope. A CLA may be used in addition to the DCO, not instead of it.
 <!-- field-guide:end -->
 
-- [ ] Ensure the DCO app is enabled for all project GitHub repositories <!-- checklist:dco-enabled --> (PR: [#44](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/44))
+- [x] Ensure the DCO app is enabled for all project GitHub repositories <!-- checklist:dco-enabled --> (PR: [#44](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/44))
 
 **Evidence:**
 
@@ -264,7 +264,7 @@ All
 Explicitly reference the CNCF Code of Conduct (or your adopted version) in the project's `README.md` on GitHub.
 <!-- field-guide:end -->
 
-- [ ] Reference the CNCF Code of Conduct in README.md <!-- checklist:coc-in-readme --> (PR: [#48](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/48))
+- [x] Reference the CNCF Code of Conduct in README.md <!-- checklist:coc-in-readme --> (PR: [#48](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/48))
 
 **Evidence:**
 
@@ -288,7 +288,7 @@ _Notes or links here._
 Document written, open governance in a `GOVERNANCE.md` file at the root of your repo.
 <!-- field-guide:end -->
 
-- [ ] Start a GOVERNANCE.md documenting open governance <!-- checklist:governance-doc --> (PR: [#46](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/46))
+- [x] Start a GOVERNANCE.md documenting open governance <!-- checklist:governance-doc --> (PR: [#46](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/46))
 
 **Evidence:**
 
@@ -300,7 +300,7 @@ https://github.com/praxis-proxy/praxis/blob/main/GOVERNANCE.md
 Document a security policy in a `SECURITY.md` file at the root of your repo. See [CNCF security guidelines](https://contribute.cncf.io/maintainers/security/security-guidelines/#3-securitymd).
 <!-- field-guide:end -->
 
-- [ ] Start a SECURITY.md security policy <!-- checklist:security-doc --> (PR: [#45](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/45))
+- [x] Start a SECURITY.md security policy <!-- checklist:security-doc --> (PR: [#45](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/45))
 
 **Evidence:**
 
@@ -312,7 +312,7 @@ https://github.com/praxis-proxy/praxis/blob/main/SECURITY.md
 Register and begin working toward an [OpenSSF Best Practices Badge](https://www.bestpractices.dev/).
 <!-- field-guide:end -->
 
-- [ ] Start an OpenSSF Best Practices Badge <!-- checklist:openssf-badge --> (PR: [#47](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/47))
+- [x] Start an OpenSSF Best Practices Badge <!-- checklist:openssf-badge --> (PR: [#47](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/47))
 
 **Evidence:**
 
