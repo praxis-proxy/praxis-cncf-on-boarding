@@ -1,5 +1,6 @@
 {
   "source_issue": "https://github.com/cncf/sandbox/issues/487",
+  "_comment": "Generic guide catalog only. Bootstrap pulls the live checklist from each project's CNCF onboarding issue and matches items here for guides/slugs/flags.",
   "categories": [
     {
       "id": "required",
@@ -9,6 +10,7 @@
         {
           "slug": "ip-policy-review",
           "title": "Review and understand the CNCF IP Policy",
+          "match_phrases": ["CNCF IP Policy", "compatible license", "Apache 2.0 license"],
           "critical": true,
           "guide": "Review the [CNCF IP Policy](https://github.com/cncf/foundation/blob/main/charter.md#11-ip-policy). Ensure the project uses a CNCF-compatible license — inbound projects must use **Apache 2.0**. (Dependency licenses are tracked separately in `license-scan-import`.)",
           "evidence_hint": "_Confirm license is Apache 2.0 and link to the LICENSE file._"
@@ -16,6 +18,7 @@
         {
           "slug": "license-policy-review",
           "title": "Review and understand the CNCF Third Party License Policy",
+          "match_phrases": ["Third Party License Policy", "Allowlist License Policy", "CNCF FOSSA or CNCF Snyk"],
           "critical": true,
           "guide": "Review the [CNCF Allowlist License Policy](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md). This governs licenses used by third-party dependencies. CNCF FOSSA or CNCF Snyk can check compliance — pick one (tracked in `license-scan-import`).",
           "evidence_hint": "_Note which scanning service you'll use (FOSSA or Snyk)._"
@@ -23,6 +26,7 @@
         {
           "slug": "trademark-guidelines-review",
           "title": "Review and understand the LF trademark guidelines",
+          "match_phrases": ["LF trademark guidelines", "trademark-usage", "plan to change your project name"],
           "critical": true,
           "guide": "Review the [Linux Foundation trademark guidelines](https://www.linuxfoundation.org/trademark-usage/). Let the TOC know if you plan to change your project name.",
           "evidence_hint": "_Confirm review complete; note any planned name change (or N/A)._"
@@ -30,6 +34,7 @@
         {
           "slug": "trademark-transfer",
           "title": "Transfer trademark and logo assets to the Linux Foundation",
+          "match_phrases": ["trademark and logo assets", "Contribution Agreement"],
           "critical": true,
           "guide": "Transfer any existing trademark and logo assets to the Linux Foundation via the Project Contribution Agreement. CNCF staff sends this document to the contact emails listed in your Sandbox application.",
           "evidence_hint": "_Date Contribution Agreement was signed, or status if pending._"
@@ -44,36 +49,42 @@
         {
           "slug": "technical-leadership-principles",
           "title": "Review the Technical Leadership Principles",
+          "match_phrases": ["Technical Leadership Principles"],
           "guide": "Read the [Technical Leadership Principles](https://contribute.cncf.io/maintainers/community/leadership-principles/), which outline expected behavior for maintainers in leadership roles.",
           "evidence_hint": "_Confirm review complete._"
         },
         {
           "slug": "project-proposal-process",
           "title": "Review the project proposal process and requirements",
+          "match_phrases": ["project proposal process and requirements"],
           "guide": "Read the [CNCF project proposal process and requirements](https://github.com/cncf/toc/blob/main/process/README.md).",
           "evidence_hint": "_Confirm review complete._"
         },
         {
           "slug": "cncf-services-review",
           "title": "Review services available for your project at the CNCF",
+          "match_phrases": ["services available for your project", "project-services"],
           "guide": "Read about [services available to CNCF projects](https://contribute.cncf.io/resources/project-services/).",
           "evidence_hint": "_Confirm review complete._"
         },
         {
           "slug": "online-program-guidelines",
           "title": "Review the online program guidelines",
+          "match_phrases": ["online program guidelines"],
           "guide": "Read the CNCF online program guidelines (webinars, meetups, events) provided by CNCF staff.",
           "evidence_hint": "_Confirm review complete._"
         },
         {
           "slug": "telemetry-policy-review",
           "title": "Review the telemetry data collection and usage policy",
+          "match_phrases": ["telemetry data collection and usage policy"],
           "guide": "Read the CNCF telemetry data collection and usage policy.",
           "evidence_hint": "_Confirm review complete._"
         },
         {
           "slug": "cncf-staff-office-hours",
           "title": "Optional: book time with CNCF staff",
+          "match_phrases": ["Book time with CNCF staff", "project-meetings.cncf.io"],
           "optional": true,
           "guide": "Optional: book time with CNCF staff to walk through available resources, work through onboarding tasks together, or ask questions.",
           "evidence_hint": "_Meeting date, or N/A if not needed._"
@@ -88,42 +99,49 @@
         {
           "slug": "neutral-github-org",
           "title": "Move the project to its own separate neutral GitHub organization",
+          "match_phrases": ["separate neutral GitHub organization", "GitHub Enterprise account"],
           "guide": "This makes the project transferable to the CNCF's GitHub Enterprise account. If it's already in another GitHub Enterprise account, remove it from there first.",
           "evidence_hint": "_Neutral GitHub org name/URL._"
         },
         {
           "slug": "ghe-invite-accepted",
           "title": "Accept the invite to join the CNCF GitHub Enterprise account",
+          "match_phrases": ["Accept the invite to join the CNCF GitHub Enterprise", "thelinuxfoundation"],
           "guide": "CNCF will add `thelinuxfoundation` as an organization owner to ensure neutral hosting.",
           "evidence_hint": "_Date invite accepted._"
         },
         {
           "slug": "slack-migration",
           "title": "Migrate Slack channels to the Kubernetes or CNCF Slack workspace",
+          "match_phrases": ["Migrate your Slack channels", "CNCF Slack workspace"],
           "guide": "CNCF staff can help. This improves discoverability, lets CNCF enforce its Code of Conduct, and enables unlimited message retention. If you already have a large Slack/Discord community, CNCF may instead link to it from a pointer channel in the CNCF Slack workspace.",
           "evidence_hint": "_Migration status or link to pointer channel._"
         },
         {
           "slug": "maintainers-circle-slack",
           "title": "Join the #maintainers-circle Slack channel",
+          "match_phrases": ["maintainers-circle"],
           "guide": "Join `#maintainers-circle` on CNCF Slack to find and share knowledge with other project teams.",
           "evidence_hint": "_Confirm joined._"
         },
         {
           "slug": "domain-transfer",
           "title": "Transfer project domain(s) to the CNCF",
+          "match_phrases": ["Transfer your domain", "Transfer project domain"],
           "guide": "If your project has its own domain(s), transfer them to the CNCF. LF Contact: `projects@cncf.io`. Project Selection: CNCF.",
           "evidence_hint": "_Domain(s) transferred, or N/A if none._"
         },
         {
           "slug": "artwork-pr",
           "title": "Submit a pull request with your artwork",
+          "match_phrases": ["cncf/artwork", "pull request with your artwork"],
           "guide": "Submit project artwork to [cncf/artwork](https://github.com/cncf/artwork). If you don't have artwork, CNCF can help design some.",
           "evidence_hint": "_Link to the artwork PR._"
         },
         {
           "slug": "analytics-transfer",
           "title": "Transfer website analytics to the CNCF",
+          "match_phrases": ["Transfer website analytics", "Google Analytics"],
           "guide": "If you use Google Analytics, add `projects@cncf.io` as an admin of your existing account so it can be moved to a CNCF-managed account. If you don't have GA, note your current analytics setup instead.",
           "evidence_hint": "_Analytics status, or N/A._"
         }
@@ -135,56 +153,79 @@
       "intro": "",
       "items": [
         {
+          "slug": "dot-project-repo",
+          "title": "Create or update the .project repo with maintainer information",
+          "match_phrases": [".project repo", "dot-project-for-maintainers", "up to date with maintainer information"],
+          "guide": "Create or ensure your [`.project` repo](https://contribute.cncf.io/blog/2026/04/22/introducing-dot-project-for-maintainers) is up to date with maintainer information.",
+          "evidence_hint": "_Link to the .project repository._"
+        },
+        {
           "slug": "maintainer-list-pr",
           "title": "Create a maintainer list and add it to the aggregated CNCF maintainer list",
-          "guide": "Create/verify `MAINTAINERS.md` and open a PR against the aggregated CNCF maintainer list.",
-          "evidence_hint": "_Link to MAINTAINERS.md and the PR against the aggregated list._"
+          "match_phrases": ["aggregated CNCF maintainer list", "MAINTAINERS.md"],
+          "guide": "Create/verify `MAINTAINERS.md` and open a PR against the aggregated CNCF maintainer list (or keep the `.project` repo current if that is the path your onboarding issue specifies).",
+          "evidence_hint": "_Link to MAINTAINERS.md / .project repo and any related PR._"
+        },
+        {
+          "slug": "lfx-profile",
+          "title": "Ensure each maintainer has an up-to-date LFX Individual Dashboard profile",
+          "match_phrases": ["LFX Individual Dashboard", "openprofile.dev", "active email address"],
+          "guide": "Ensure each maintainer has an up-to-date [LFX Individual Dashboard profile](https://openprofile.dev/) with an active email address for mailing list and Service Desk access.",
+          "evidence_hint": "_Confirm each maintainer profile is current._"
         },
         {
           "slug": "maintainer-emails",
           "title": "Provide maintainer emails for mailing list and Service Desk access",
-          "guide": "Email maintainer addresses to `project-onboarding@cncf.io` (not shared publicly). Also link each maintainer's GitHub ID with their LF profile.",
-          "evidence_hint": "_Date emailed; confirm LF profile linking._"
+          "match_phrases": ["Provide maintainer emails", "mailing list and Service Desk"],
+          "guide": "Email maintainer addresses to `project-onboarding@cncf.io` (not shared publicly), or ensure LFX profiles include active emails if that is what your onboarding issue requires. Also link each maintainer's GitHub ID with their LF profile.",
+          "evidence_hint": "_Date emailed / LFX profiles confirmed._"
         },
         {
           "slug": "dco-enabled",
           "title": "Ensure the DCO app is enabled for all project GitHub repositories",
+          "match_phrases": ["DCO", "github.com/apps/dco"],
           "guide": "Enable the [DCO GitHub App](https://github.com/apps/dco) on every repo in scope. A CLA may be used in addition to the DCO, not instead of it.",
           "evidence_hint": "_List repos with DCO enabled._"
         },
         {
           "slug": "coc-in-readme",
           "title": "Reference the CNCF Code of Conduct in README.md",
+          "match_phrases": ["Code of Conduct", "code-of-conduct.md"],
           "guide": "Explicitly reference the CNCF Code of Conduct (or your adopted version) in the project's `README.md` on GitHub.",
           "evidence_hint": "_Link to the README section._"
         },
         {
           "slug": "lf-footer",
           "title": "Add the LF footer to your website (or README if no website)",
-          "guide": "Add the Linux Foundation footer to your website per [LF branding guidelines](https://github.com/cncf/foundation/blob/main/website-guidelines.md). If you don't have a dedicated website, adopt these guidelines for `README.md` instead.",
+          "match_phrases": ["LF footer", "website-guidelines"],
+          "guide": "Add the Linux Foundation footer to your website per [LF branding guidelines](https://github.com/cncf/foundation/blob/main/policies-guidance/website-guidelines.md). If you don't have a dedicated website, adopt these guidelines for `README.md` instead.",
           "evidence_hint": "_Link to footer on the site or README section._"
         },
         {
           "slug": "governance-doc",
           "title": "Start a GOVERNANCE.md documenting open governance",
+          "match_phrases": ["written, open governance", "GOVERNANCE.md"],
           "guide": "Document written, open governance in a `GOVERNANCE.md` file at the root of your repo.",
           "evidence_hint": "_Link to GOVERNANCE.md._"
         },
         {
           "slug": "security-doc",
           "title": "Start a SECURITY.md security policy",
+          "match_phrases": ["security policy", "SECURITY.md"],
           "guide": "Document a security policy in a `SECURITY.md` file at the root of your repo. See [CNCF security guidelines](https://contribute.cncf.io/maintainers/security/security-guidelines/#3-securitymd).",
           "evidence_hint": "_Link to SECURITY.md._"
         },
         {
           "slug": "openssf-badge",
           "title": "Start an OpenSSF Best Practices Badge",
+          "match_phrases": ["OpenSSF Best Practices Badge", "bestpractices.dev"],
           "guide": "Register and begin working toward an [OpenSSF Best Practices Badge](https://www.bestpractices.dev/).",
           "evidence_hint": "_Link to the badge page/status._"
         },
         {
           "slug": "license-scan-import",
           "title": "Import all project repos into a license scanning service",
+          "match_phrases": ["license scanning service", "Import all project repos"],
           "guide": "Import all repos in scope into CNCF FOSSA or CNCF Snyk (see `license-policy-review`).",
           "evidence_hint": "_Service used and confirmation all repos are imported._"
         }
@@ -198,6 +239,7 @@
         {
           "slug": "devstats",
           "title": "CNCF staff: add the project to DevStats",
+          "match_phrases": ["Add the project to DevStats", "devstats.cncf.io"],
           "staff": true,
           "guide": "CNCF staff adds the project to [DevStats](https://all.devstats.cncf.io/).",
           "evidence_hint": "_Link to the project's DevStats dashboard once available._"
@@ -205,6 +247,7 @@
         {
           "slug": "clomonitor",
           "title": "CNCF staff: add the project to CLOMonitor",
+          "match_phrases": ["Add the project to CLOmonitor", "Add the project to CLOMonitor", "clomonitor.io"],
           "staff": true,
           "guide": "CNCF staff adds the project to [CLOMonitor](https://clomonitor.io/).",
           "evidence_hint": "_Link to the project's CLOMonitor report card._"
@@ -212,6 +255,7 @@
         {
           "slug": "lfx-insights-onboarding",
           "title": "CNCF staff: add the project to LFX Insights",
+          "match_phrases": ["Add the project to LFX Insights", "insights.linuxfoundation.org"],
           "staff": true,
           "guide": "CNCF staff adds the project to [LFX Insights](https://insights.linuxfoundation.org/).",
           "evidence_hint": "_Link to LFX Insights for the project._"
@@ -219,6 +263,7 @@
         {
           "slug": "lfx-pcc-activation",
           "title": "CNCF staff: activate the project in the LFX Project Control Center",
+          "match_phrases": ["Activate the project in the LFX Project Control Center", "Project Control Center"],
           "staff": true,
           "guide": "CNCF staff activates the project in the LFX Project Control Center (PCC).",
           "evidence_hint": "_Confirmation date once activated._"
@@ -226,6 +271,7 @@
         {
           "slug": "landscape-listing-onboarding",
           "title": "CNCF staff: add the project to the Cloud Native Landscape",
+          "match_phrases": ["Cloud Native Landscape", "lfx_slug"],
           "staff": true,
           "guide": "After PCC activation, CNCF staff adds the project to the [Cloud Native Landscape](https://landscape.cncf.io/), including the `lfx_slug` in the landscape configuration file.",
           "evidence_hint": "_Link to the landscape PR/entry._"
@@ -233,6 +279,7 @@
         {
           "slug": "license-scanner-team",
           "title": "CNCF staff: add the maintainers team to the license scanner",
+          "match_phrases": ["maintainers team to a license scanner", "maintainers team to the license scanner"],
           "staff": true,
           "guide": "CNCF staff adds the maintainers team to the chosen license scanner service (FOSSA or Snyk).",
           "evidence_hint": "_Confirmation maintainers have scanner access._"
@@ -240,13 +287,31 @@
         {
           "slug": "groupsio-list",
           "title": "CNCF staff: create a groups.io project maintainer list in PCC",
+          "match_phrases": ["Create groups.io project maintainer list", "groups.io project maintainer list in PCC"],
           "staff": true,
           "guide": "CNCF staff creates a groups.io maintainer list for the project in the LFX Project Control Center.",
           "evidence_hint": "_Groups.io list name/link._"
         },
         {
+          "slug": "cncf-service-desk",
+          "title": "CNCF staff: create project in CNCF Service Desk",
+          "match_phrases": ["Create project in CNCF Service desk", "CNCF Service Desk"],
+          "staff": true,
+          "guide": "CNCF staff creates the project in the CNCF Service Desk.",
+          "evidence_hint": "_Confirmation Service Desk project exists._"
+        },
+        {
+          "slug": "onboard-project-workflow",
+          "title": "CNCF staff: run Onboard Project workflow",
+          "match_phrases": ["Onboard Project workflow", "maintainer-manager"],
+          "staff": true,
+          "guide": "CNCF staff runs the [Onboard Project workflow](https://github.com/cncf/maintainer-manager/actions/workflows/onboard-project.yml).",
+          "evidence_hint": "_Link to the workflow run, or confirmation complete._"
+        },
+        {
           "slug": "groupsio-maintainers-list",
           "title": "CNCF staff: add the project's groups.io list to maintainers@cncf.io",
+          "match_phrases": ["maintainers@cncf.io", "groups.io maintainer list to"],
           "staff": true,
           "guide": "CNCF staff adds the project's groups.io maintainer list to `maintainers@cncf.io`.",
           "evidence_hint": "_Confirmation complete._"
@@ -254,6 +319,7 @@
         {
           "slug": "welcome-email",
           "title": "CNCF staff: send a welcome email confirming maintainer list access",
+          "match_phrases": ["welcome email", "confirm maintainer list access"],
           "staff": true,
           "guide": "CNCF staff sends a welcome email confirming maintainer mailing list and Service Desk access.",
           "evidence_hint": "_Date welcome email received._"
