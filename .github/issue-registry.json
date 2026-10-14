@@ -37,6 +37,11 @@
     "trademark-transfer": 33,
     "trademark-guidelines-review": 34,
     "license-policy-review": 35,
-    "ip-policy-review": 36
-  }
+    "ip-policy-review": 36,
+    "dot-project-repo": 53,
+    "lfx-profile": 54,
+    "cncf-service-desk": 55,
+    "onboard-project-workflow": 56
+  },
+  "source_issue": "https://github.com/cncf/sandbox/issues/540"
 }

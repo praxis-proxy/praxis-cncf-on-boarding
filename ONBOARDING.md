@@ -1,16 +1,16 @@
 # CNCF Sandbox Onboarding
 
-Single source of truth for completing [CNCF Sandbox onboarding](https://github.com/cncf/sandbox/issues/487) after your project's TOC acceptance vote.
+Single source of truth for completing [CNCF Sandbox onboarding](https://github.com/cncf/sandbox/issues/540) after your project's TOC acceptance vote.
 
-**Work here only:** each item shows `(Issue: …)` until you open a PR with `Closes #N`; automation then checks the box and shows `(PR: …)` here and in [README.md](README.md). Edit evidence below; do not edit README or toggle boxes yourself.
+**Work here only:** each item shows `(Issue: …)` until a PR with `Closes #N` **merges**; automation then checks the box and shows `(PR: …)` here and in [README.md](README.md). Edit evidence below; do not edit README or toggle boxes yourself.
 
 Onboarding should be completed within **one month** of acceptance. When everything is done (or intentionally N/A), run `./scripts/generate-status-report.sh` to produce an update for your CNCF onboarding issue.
 
 ---
 
-## Required before CNCF staff can proceed
+## Required Before Proceeding With Onboarding
 
-A signed Project Contribution Agreement and trademark transfer are required **before** CNCF staff can complete the rest of onboarding. Other items can be worked on in parallel.
+A "Project Contribution Agreement" must be completed and any existing trademarks **MUST** be transferred to the Linux Foundation **BEFORE** the CNCF staff onboarding tasks can be completed. Other tasks can be done by projects themselves in the meantime.
 
 ### ip-policy-review
 
@@ -18,7 +18,7 @@ A signed Project Contribution Agreement and trademark transfer are required **be
 Review the [CNCF IP Policy](https://github.com/cncf/foundation/blob/main/charter.md#11-ip-policy). Ensure the project uses a CNCF-compatible license — inbound projects must use **Apache 2.0**. (Dependency licenses are tracked separately in `license-scan-import`.)
 <!-- field-guide:end -->
 
-- [X] Review and understand the CNCF IP Policy <!-- checklist:ip-policy-review --> (Issue: [#36](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/36))
+- [x] Review and understand the CNCF IP Policy <!-- checklist:ip-policy-review --> (Issue: [#36](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/36))
 
 **Evidence:**
 
@@ -30,7 +30,7 @@ All licenses are Apache 2.0
 Review the [CNCF Allowlist License Policy](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md). This governs licenses used by third-party dependencies. CNCF FOSSA or CNCF Snyk can check compliance — pick one (tracked in `license-scan-import`).
 <!-- field-guide:end -->
 
-- [x] Review and understand the CNCF Third Party License Policy <!-- checklist:license-policy-review --> (Issue: [#35](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/35))
+- [ ] Review and understand the CNCF Third Party License Policy <!-- checklist:license-policy-review --> (Issue: [#35](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/35))
 
 **Evidence:**
 
@@ -42,7 +42,7 @@ FOSSA
 Review the [Linux Foundation trademark guidelines](https://www.linuxfoundation.org/trademark-usage/). Let the TOC know if you plan to change your project name.
 <!-- field-guide:end -->
 
-- [X] Review and understand the LF trademark guidelines <!-- checklist:trademark-guidelines-review --> (PR: [#43](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/43))
+- [x] Review and understand the LF trademark guidelines <!-- checklist:trademark-guidelines-review --> (PR: [#43](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/43))
 
 **Evidence:**
 
@@ -54,11 +54,11 @@ No name changes planned
 Transfer any existing trademark and logo assets to the Linux Foundation via the Project Contribution Agreement. CNCF staff sends this document to the contact emails listed in your Sandbox application.
 <!-- field-guide:end -->
 
-- [ ] Transfer trademark and logo assets to the Linux Foundation <!-- checklist:trademark-transfer --> (Issue: [#33](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/33))
+- [x] Transfer trademark and logo assets to the Linux Foundation <!-- checklist:trademark-transfer --> (Issue: [#33](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/33))
 
 **Evidence:**
 
-_Date Contribution Agreement was signed, or status if pending._
+_Notes or links here._
 
 ## Review and understand other documents
 
@@ -72,7 +72,7 @@ Read the [Technical Leadership Principles](https://contribute.cncf.io/maintainer
 
 **Evidence:**
 
-_Confirm review complete._
+_Notes or links here._
 
 ### project-proposal-process
 
@@ -84,7 +84,7 @@ Read the [CNCF project proposal process and requirements](https://github.com/cnc
 
 **Evidence:**
 
-_Confirm review complete._
+_Notes or links here._
 
 ### cncf-services-review
 
@@ -96,7 +96,7 @@ Read about [services available to CNCF projects](https://contribute.cncf.io/reso
 
 **Evidence:**
 
-_Confirm review complete._
+_Notes or links here._
 
 ### online-program-guidelines
 
@@ -108,7 +108,7 @@ Read the CNCF online program guidelines (webinars, meetups, events) provided by 
 
 **Evidence:**
 
-_Confirm review complete._
+_Notes or links here._
 
 ### telemetry-policy-review
 
@@ -120,7 +120,7 @@ Read the CNCF telemetry data collection and usage policy.
 
 **Evidence:**
 
-_Confirm review complete._
+_Notes or links here._
 
 ### cncf-staff-office-hours
 
@@ -132,7 +132,7 @@ Optional: book time with CNCF staff to walk through available resources, work th
 
 **Evidence:**
 
-_Meeting date, or N/A if not needed._
+_Notes or links here._
 
 ## Contribute and transfer other materials
 
@@ -142,7 +142,7 @@ _Meeting date, or N/A if not needed._
 This makes the project transferable to the CNCF's GitHub Enterprise account. If it's already in another GitHub Enterprise account, remove it from there first.
 <!-- field-guide:end -->
 
-- [x] Move the project to its own separate neutral GitHub organization <!-- checklist:neutral-github-org --> (PR: [#38](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/38))
+- [ ] Move the project to its own separate neutral GitHub organization <!-- checklist:neutral-github-org --> (PR: [#38](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/38))
 
 **Evidence:**
 
@@ -158,7 +158,7 @@ CNCF will add `thelinuxfoundation` as an organization owner to ensure neutral ho
 
 **Evidence:**
 
-_Date invite accepted._
+_Notes or links here._
 
 ### slack-migration
 
@@ -166,7 +166,7 @@ _Date invite accepted._
 CNCF staff can help. This improves discoverability, lets CNCF enforce its Code of Conduct, and enables unlimited message retention. If you already have a large Slack/Discord community, CNCF may instead link to it from a pointer channel in the CNCF Slack workspace.
 <!-- field-guide:end -->
 
-- [X] Migrate Slack channels to the Kubernetes or CNCF Slack workspace <!-- checklist:slack-migration --> (PR: [#41](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/41))
+- [x] Migrate Slack channels to the Kubernetes or CNCF Slack workspace <!-- checklist:slack-migration --> (PR: [#41](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/41))
 
 **Evidence:**
 
@@ -178,7 +178,7 @@ Channel exists already https://cloud-native.slack.com/archives/C0BK0RSP5RC
 Join `#maintainers-circle` on CNCF Slack to find and share knowledge with other project teams.
 <!-- field-guide:end -->
 
-- [X] Join the #maintainers-circle Slack channel <!-- checklist:maintainers-circle-slack --> (PR: [#49](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/49))
+- [ ] Join the #maintainers-circle Slack channel <!-- checklist:maintainers-circle-slack --> (PR: [#49](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/49))
 
 **Evidence:**
 
@@ -190,7 +190,7 @@ Joined `#maintainers-circle` on CNCF Slack: https://cloud-native.slack.com/archi
 If your project has its own domain(s), transfer them to the CNCF. LF Contact: `projects@cncf.io`. Project Selection: CNCF.
 <!-- field-guide:end -->
 
-- [X] Transfer project domain(s) to the CNCF <!-- checklist:domain-transfer --> (PR: [#42](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/42))
+- [ ] Transfer project domain(s) to the CNCF <!-- checklist:domain-transfer --> (PR: [#42](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/42))
 
 **Evidence:**
 
@@ -206,7 +206,7 @@ Submit project artwork to [cncf/artwork](https://github.com/cncf/artwork). If yo
 
 **Evidence:**
 
-_Link to the artwork PR._
+_Notes or links here._
 
 ### analytics-transfer
 
@@ -218,33 +218,33 @@ If you use Google Analytics, add `projects@cncf.io` as an admin of your existing
 
 **Evidence:**
 
-_Analytics status, or N/A._
+_Notes or links here._
 
 ## Update and document project details
 
-### maintainer-list-pr
+### dot-project-repo
 
 <!-- field-guide:start -->
-Create/verify `MAINTAINERS.md` and open a PR against the aggregated CNCF maintainer list.
+Create or ensure your [`.project` repo](https://contribute.cncf.io/blog/2026/04/22/introducing-dot-project-for-maintainers) is up to date with maintainer information.
 <!-- field-guide:end -->
 
-- [ ] Create a maintainer list and add it to the aggregated CNCF maintainer list <!-- checklist:maintainer-list-pr --> (Issue: [#19](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/19))
+- [ ] Create or update the .project repo with maintainer information <!-- checklist:dot-project-repo --> (Issue: [#53](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/53))
 
 **Evidence:**
 
-_Link to MAINTAINERS.md and the PR against the aggregated list._
+_Notes or links here._
 
-### maintainer-emails
+### lfx-profile
 
 <!-- field-guide:start -->
-Email maintainer addresses to `project-onboarding@cncf.io` (not shared publicly). Also link each maintainer's GitHub ID with their LF profile.
+Ensure each maintainer has an up-to-date [LFX Individual Dashboard profile](https://openprofile.dev/) with an active email address for mailing list and Service Desk access.
 <!-- field-guide:end -->
 
-- [ ] Provide maintainer emails for mailing list and Service Desk access <!-- checklist:maintainer-emails --> (Issue: [#18](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/18))
+- [ ] Ensure each maintainer has an up-to-date LFX Individual Dashboard profile <!-- checklist:lfx-profile --> (Issue: [#54](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/54))
 
 **Evidence:**
 
-_Date emailed; confirm LF profile linking._
+_Notes or links here._
 
 ### dco-enabled
 
@@ -252,7 +252,7 @@ _Date emailed; confirm LF profile linking._
 Enable the [DCO GitHub App](https://github.com/apps/dco) on every repo in scope. A CLA may be used in addition to the DCO, not instead of it.
 <!-- field-guide:end -->
 
-- [x] Ensure the DCO app is enabled for all project GitHub repositories <!-- checklist:dco-enabled --> (PR: [#44](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/44))
+- [ ] Ensure the DCO app is enabled for all project GitHub repositories <!-- checklist:dco-enabled --> (PR: [#44](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/44))
 
 **Evidence:**
 
@@ -264,7 +264,7 @@ All
 Explicitly reference the CNCF Code of Conduct (or your adopted version) in the project's `README.md` on GitHub.
 <!-- field-guide:end -->
 
-- [x] Reference the CNCF Code of Conduct in README.md <!-- checklist:coc-in-readme --> (PR: [#48](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/48))
+- [ ] Reference the CNCF Code of Conduct in README.md <!-- checklist:coc-in-readme --> (PR: [#48](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/48))
 
 **Evidence:**
 
@@ -273,14 +273,14 @@ The [project README](https://github.com/praxis-proxy/praxis/blob/main/README.md#
 ### lf-footer
 
 <!-- field-guide:start -->
-Add the Linux Foundation footer to your website per [LF branding guidelines](https://github.com/cncf/foundation/blob/main/website-guidelines.md). If you don't have a dedicated website, adopt these guidelines for `README.md` instead.
+Add the Linux Foundation footer to your website per [LF branding guidelines](https://github.com/cncf/foundation/blob/main/policies-guidance/website-guidelines.md). If you don't have a dedicated website, adopt these guidelines for `README.md` instead.
 <!-- field-guide:end -->
 
 - [ ] Add the LF footer to your website (or README if no website) <!-- checklist:lf-footer --> (Issue: [#15](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/15))
 
 **Evidence:**
 
-_Link to footer on the site or README section._
+_Notes or links here._
 
 ### governance-doc
 
@@ -288,7 +288,7 @@ _Link to footer on the site or README section._
 Document written, open governance in a `GOVERNANCE.md` file at the root of your repo.
 <!-- field-guide:end -->
 
-- [x] Start a GOVERNANCE.md documenting open governance <!-- checklist:governance-doc --> (PR: [#46](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/46))
+- [ ] Start a GOVERNANCE.md documenting open governance <!-- checklist:governance-doc --> (PR: [#46](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/46))
 
 **Evidence:**
 
@@ -300,7 +300,7 @@ https://github.com/praxis-proxy/praxis/blob/main/GOVERNANCE.md
 Document a security policy in a `SECURITY.md` file at the root of your repo. See [CNCF security guidelines](https://contribute.cncf.io/maintainers/security/security-guidelines/#3-securitymd).
 <!-- field-guide:end -->
 
-- [x] Start a SECURITY.md security policy <!-- checklist:security-doc --> (PR: [#45](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/45))
+- [ ] Start a SECURITY.md security policy <!-- checklist:security-doc --> (PR: [#45](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/45))
 
 **Evidence:**
 
@@ -312,7 +312,7 @@ https://github.com/praxis-proxy/praxis/blob/main/SECURITY.md
 Register and begin working toward an [OpenSSF Best Practices Badge](https://www.bestpractices.dev/).
 <!-- field-guide:end -->
 
-- [x] Start an OpenSSF Best Practices Badge <!-- checklist:openssf-badge --> (PR: [#47](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/47))
+- [ ] Start an OpenSSF Best Practices Badge <!-- checklist:openssf-badge --> (PR: [#47](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/47))
 
 **Evidence:**
 
@@ -328,9 +328,9 @@ Import all repos in scope into CNCF FOSSA or CNCF Snyk (see `license-policy-revi
 
 **Evidence:**
 
-_Service used and confirmation all repos are imported._
+_Notes or links here._
 
-## CNCF staff tasks (track and follow up)
+## CNCF staff tasks to support the project
 
 These are completed by CNCF staff, not the project. Track them here so you know what to follow up on; check the box once staff confirms completion.
 
@@ -344,7 +344,7 @@ CNCF staff adds the project to [DevStats](https://all.devstats.cncf.io/).
 
 **Evidence:**
 
-_Link to the project's DevStats dashboard once available._
+_Notes or links here._
 
 ### clomonitor
 
@@ -356,7 +356,7 @@ CNCF staff adds the project to [CLOMonitor](https://clomonitor.io/).
 
 **Evidence:**
 
-_Link to the project's CLOMonitor report card._
+_Notes or links here._
 
 ### lfx-insights-onboarding
 
@@ -368,7 +368,7 @@ CNCF staff adds the project to [LFX Insights](https://insights.linuxfoundation.o
 
 **Evidence:**
 
-_Link to LFX Insights for the project._
+_Notes or links here._
 
 ### lfx-pcc-activation
 
@@ -380,7 +380,7 @@ CNCF staff activates the project in the LFX Project Control Center (PCC).
 
 **Evidence:**
 
-_Confirmation date once activated._
+_Notes or links here._
 
 ### landscape-listing-onboarding
 
@@ -392,7 +392,7 @@ After PCC activation, CNCF staff adds the project to the [Cloud Native Landscape
 
 **Evidence:**
 
-_Link to the landscape PR/entry._
+_Notes or links here._
 
 ### license-scanner-team
 
@@ -404,7 +404,7 @@ CNCF staff adds the maintainers team to the chosen license scanner service (FOSS
 
 **Evidence:**
 
-_Confirmation maintainers have scanner access._
+_Notes or links here._
 
 ### groupsio-list
 
@@ -412,11 +412,35 @@ _Confirmation maintainers have scanner access._
 CNCF staff creates a groups.io maintainer list for the project in the LFX Project Control Center.
 <!-- field-guide:end -->
 
-- [ ] CNCF staff: create a groups.io project maintainer list in PCC <!-- checklist:groupsio-list --> (Issue: [#4](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/4))
+- [x] CNCF staff: create a groups.io project maintainer list in PCC <!-- checklist:groupsio-list --> (Issue: [#4](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/4))
 
 **Evidence:**
 
-_Groups.io list name/link._
+_Notes or links here._
+
+### cncf-service-desk
+
+<!-- field-guide:start -->
+CNCF staff creates the project in the CNCF Service Desk.
+<!-- field-guide:end -->
+
+- [x] CNCF staff: create project in CNCF Service Desk <!-- checklist:cncf-service-desk --> (Issue: [#55](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/55))
+
+**Evidence:**
+
+_Notes or links here._
+
+### onboard-project-workflow
+
+<!-- field-guide:start -->
+CNCF staff runs the [Onboard Project workflow](https://github.com/cncf/maintainer-manager/actions/workflows/onboard-project.yml).
+<!-- field-guide:end -->
+
+- [x] CNCF staff: run Onboard Project workflow <!-- checklist:onboard-project-workflow --> (Issue: [#56](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/56))
+
+**Evidence:**
+
+_Notes or links here._
 
 ### groupsio-maintainers-list
 
@@ -424,11 +448,11 @@ _Groups.io list name/link._
 CNCF staff adds the project's groups.io maintainer list to `maintainers@cncf.io`.
 <!-- field-guide:end -->
 
-- [ ] CNCF staff: add the project's groups.io list to maintainers@cncf.io <!-- checklist:groupsio-maintainers-list --> (Issue: [#3](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/3))
+- [x] CNCF staff: add the project's groups.io list to maintainers@cncf.io <!-- checklist:groupsio-maintainers-list --> (Issue: [#3](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/3))
 
 **Evidence:**
 
-_Confirmation complete._
+_Notes or links here._
 
 ### welcome-email
 
@@ -440,18 +464,4 @@ CNCF staff sends a welcome email confirming maintainer mailing list and Service 
 
 **Evidence:**
 
-_Date welcome email received._
-
-## Final review
-
-### onboarding-complete
-
-<!-- field-guide:start -->
-When every item above is complete (or intentionally N/A), post a status update on your CNCF onboarding issue and ask CNCF staff to confirm and close it. Run `./scripts/generate-status-report.sh` to produce a paste-ready update, or `./scripts/generate-status-report.sh --post` to post it directly as a comment.
-<!-- field-guide:end -->
-
-- [ ] Final review: confirm all items complete and request sign-off <!-- checklist:onboarding-complete --> (Issue: [#1](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/1))
-
-**Evidence:**
-
-_Link to the comment confirming onboarding complete, and the closed onboarding issue._
+_Notes or links here._

@@ -15,7 +15,7 @@ This repository helps you track and complete [CNCF Sandbox onboarding](https://g
 ## Onboarding progress
 
 <!-- checklist-progress:start -->
-> **Onboarding progress:** **8 / 36** items complete (22%)  
+> **Onboarding progress:** **8 / 37** items complete (22%)  
 > `████░░░░░░░░░░░░░░░░` 22%
 <!-- checklist-progress:end -->
 
@@ -25,33 +25,30 @@ Each row links to the matching section in [ONBOARDING.md](ONBOARDING.md). A PR w
 
 <!-- onboarding-dashboard:start -->
 - ✅ [Review and understand the CNCF IP Policy](ONBOARDING.md#ip-policy-review) (Issue: [#36](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/36))
-- ✅ [Review and understand the CNCF Third Party License Policy](ONBOARDING.md#license-policy-review) (Issue: [#35](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/35))
+- ⬜ [Review and understand the CNCF Third Party License Policy](ONBOARDING.md#license-policy-review) (Issue: [#35](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/35))
 - ✅ [Review and understand the LF trademark guidelines](ONBOARDING.md#trademark-guidelines-review) (PR: [#43](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/43))
-- ⬜ [Transfer trademark and logo assets to the Linux Foundation](ONBOARDING.md#trademark-transfer) (Issue: [#33](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/33))
+- ✅ [Transfer trademark and logo assets to the Linux Foundation](ONBOARDING.md#trademark-transfer) (Issue: [#33](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/33))
 - ⬜ [Review the Technical Leadership Principles](ONBOARDING.md#technical-leadership-principles) (Issue: [#32](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/32))
 - ⬜ [Review the project proposal process and requirements](ONBOARDING.md#project-proposal-process) (Issue: [#31](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/31))
 - ⬜ [Review services available for your project at the CNCF](ONBOARDING.md#cncf-services-review) (Issue: [#30](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/30))
 - ⬜ [Review the online program guidelines](ONBOARDING.md#online-program-guidelines) (Issue: [#29](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/29))
 - ⬜ [Review the telemetry data collection and usage policy](ONBOARDING.md#telemetry-policy-review) (Issue: [#28](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/28))
 - ⬜ [Optional: book time with CNCF staff](ONBOARDING.md#cncf-staff-office-hours) (Issue: [#27](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/27))
-- ✅ [Move the project to its own separate neutral GitHub organization](ONBOARDING.md#neutral-github-org) (PR: [#38](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/38))
+- ⬜ [Move the project to its own separate neutral GitHub organization](ONBOARDING.md#neutral-github-org) (PR: [#38](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/38))
 - ⬜ [Accept the invite to join the CNCF GitHub Enterprise account](ONBOARDING.md#ghe-invite-accepted) (Issue: [#25](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/25))
 - ✅ [Migrate Slack channels to the Kubernetes or CNCF Slack workspace](ONBOARDING.md#slack-migration) (PR: [#41](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/41))
-- ✅ [Join the #maintainers-circle Slack channel](ONBOARDING.md#maintainers-circle-slack) (PR: [#49](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/49))
-- ✅ [Transfer project domain(s) to the CNCF](ONBOARDING.md#domain-transfer) (PR: [#42](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/42))
+- ⬜ [Join the #maintainers-circle Slack channel](ONBOARDING.md#maintainers-circle-slack) (PR: [#49](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/49))
+- ⬜ [Transfer project domain(s) to the CNCF](ONBOARDING.md#domain-transfer) (PR: [#42](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/42))
 - ⬜ [Submit a pull request with your artwork](ONBOARDING.md#artwork-pr) (Issue: [#21](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/21))
 - ⬜ [Transfer website analytics to the CNCF](ONBOARDING.md#analytics-transfer) (Issue: [#20](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/20))
-- ⬜ [Create a maintainer list and add it to the aggregated CNCF maintainer list](ONBOARDING.md#maintainer-list-pr) (Issue: [#19](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/19))
-- ⬜ [Provide maintainer emails for mailing list and Service Desk access](ONBOARDING.md#maintainer-emails) (Issue: [#18](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/18))
-- ✅ [Ensure the DCO app is enabled for all project GitHub repositories](ONBOARDING.md#dco-enabled) (PR: [#44](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/44))
-- ✅ [Reference the CNCF Code of Conduct in README.md](ONBOARDING.md#coc-in-readme) (PR: [#48](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/48))
+- ⬜ [Create or update the .project repo with maintainer information](ONBOARDING.md#dot-project-repo) (Issue: [#53](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/53))
+- ⬜ [Ensure each maintainer has an up-to-date LFX Individual Dashboard profile](ONBOARDING.md#lfx-profile) (Issue: [#54](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/54))
+- ⬜ [Ensure the DCO app is enabled for all project GitHub repositories](ONBOARDING.md#dco-enabled) (PR: [#44](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/44))
+- ⬜ [Reference the CNCF Code of Conduct in README.md](ONBOARDING.md#coc-in-readme) (PR: [#48](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/48))
 - ⬜ [Add the LF footer to your website (or README if no website)](ONBOARDING.md#lf-footer) (Issue: [#15](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/15))
-- ✅ [Start a GOVERNANCE.md documenting open governance](ONBOARDING.md#governance-doc) (PR: [#46](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/46))
-- ✅ [Start a SECURITY.md security policy](ONBOARDING.md#security-doc) (Issue: [#13](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/13))
-- ✅ [Start an OpenSSF Best Practices Badge](ONBOARDING.md#openssf-badge) (PR: [#47](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/47))
-- ⬜ [Start a GOVERNANCE.md documenting open governance](ONBOARDING.md#governance-doc) (Issue: [#14](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/14))
-- ✅ [Start a SECURITY.md security policy](ONBOARDING.md#security-doc) (PR: [#45](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/45))
-- ⬜ [Start an OpenSSF Best Practices Badge](ONBOARDING.md#openssf-badge) (Issue: [#12](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/12))
+- ⬜ [Start a GOVERNANCE.md documenting open governance](ONBOARDING.md#governance-doc) (PR: [#46](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/46))
+- ⬜ [Start a SECURITY.md security policy](ONBOARDING.md#security-doc) (PR: [#45](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/45))
+- ⬜ [Start an OpenSSF Best Practices Badge](ONBOARDING.md#openssf-badge) (PR: [#47](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/47))
 - ⬜ [Import all project repos into a license scanning service](ONBOARDING.md#license-scan-import) (Issue: [#11](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/11))
 - ⬜ [CNCF staff: add the project to DevStats](ONBOARDING.md#devstats) (Issue: [#10](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/10))
 - ⬜ [CNCF staff: add the project to CLOMonitor](ONBOARDING.md#clomonitor) (Issue: [#9](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/9))
@@ -59,10 +56,11 @@ Each row links to the matching section in [ONBOARDING.md](ONBOARDING.md). A PR w
 - ⬜ [CNCF staff: activate the project in the LFX Project Control Center](ONBOARDING.md#lfx-pcc-activation) (Issue: [#7](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/7))
 - ⬜ [CNCF staff: add the project to the Cloud Native Landscape](ONBOARDING.md#landscape-listing-onboarding) (Issue: [#6](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/6))
 - ⬜ [CNCF staff: add the maintainers team to the license scanner](ONBOARDING.md#license-scanner-team) (Issue: [#5](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/5))
-- ⬜ [CNCF staff: create a groups.io project maintainer list in PCC](ONBOARDING.md#groupsio-list) (Issue: [#4](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/4))
-- ⬜ [CNCF staff: add the project's groups.io list to maintainers@cncf.io](ONBOARDING.md#groupsio-maintainers-list) (Issue: [#3](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/3))
+- ✅ [CNCF staff: create a groups.io project maintainer list in PCC](ONBOARDING.md#groupsio-list) (Issue: [#4](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/4))
+- ✅ [CNCF staff: create project in CNCF Service Desk](ONBOARDING.md#cncf-service-desk) (Issue: [#55](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/55))
+- ✅ [CNCF staff: run Onboard Project workflow](ONBOARDING.md#onboard-project-workflow) (Issue: [#56](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/56))
+- ✅ [CNCF staff: add the project's groups.io list to maintainers@cncf.io](ONBOARDING.md#groupsio-maintainers-list) (Issue: [#3](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/3))
 - ⬜ [CNCF staff: send a welcome email confirming maintainer list access](ONBOARDING.md#welcome-email) (Issue: [#2](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/2))
-- ⬜ [Final review: confirm all items complete and request sign-off](ONBOARDING.md#onboarding-complete) (Issue: [#1](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/1))
 
 <!-- onboarding-dashboard:end -->
 

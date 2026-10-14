@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Creates one GitHub issue per CNCF sandbox onboarding item (from
-# .github/onboarding-items.json) and writes issue links into ONBOARDING.md.
+# Pulls the live checklist from your project's CNCF onboarding issue, creates
+# one GitHub issue per item, and writes issue links into ONBOARDING.md.
+#
+# .github/onboarding-items.json is a generic guide catalog (slugs/guides/flags).
+# Bootstrap fetches the CNCF issue body as the authoritative item list.
 #
 # Prerequisites:
 #   - GitHub CLI (gh) installed and authenticated
@@ -11,20 +14,23 @@ set -euo pipefail
 #
 # Usage:
 #   ./scripts/bootstrap-issues.sh [--dry-run]
-#   ./scripts/bootstrap-issues.sh --project-name "MyProject" [--non-interactive]
+#   ./scripts/bootstrap-issues.sh --project-name "MyProject" --onboarding-issue-url URL [--non-interactive]
 #
 # Options:
 #   --project-name NAME         Project name (prompted if omitted)
-#   --onboarding-issue-url URL  Link to your project's cncf/sandbox onboarding issue
+#   --onboarding-issue-url URL  Required: your project's cncf/sandbox onboarding issue
 #   --accepted-date YYYY-MM-DD  Date of the TOC acceptance vote
 #   --non-interactive           Fail if required values are missing instead of prompting
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-ITEMS_FILE="${ROOT_DIR}/.github/onboarding-items.json"
+CATALOG_FILE="${ROOT_DIR}/.github/onboarding-items.json"
+ITEMS_FILE="${ROOT_DIR}/.github/onboarding-items.generated.json"
 ONBOARDING_FILE="${ROOT_DIR}/ONBOARDING.md"
 REGISTRY_FILE="${ROOT_DIR}/.github/issue-registry.json"
 METADATA_FILE="${ROOT_DIR}/.github/project-metadata.json"
 APPLY_METADATA="${ROOT_DIR}/scripts/apply_onboarding_metadata.py"
+FETCH_CHECKLIST="${ROOT_DIR}/scripts/fetch_cncf_checklist.py"
+RENDER_ONBOARDING="${ROOT_DIR}/scripts/render_onboarding_template.py"
 TRACKING="${ROOT_DIR}/scripts/checklist_tracking.py"
 DRY_RUN=false
 NON_INTERACTIVE=false
@@ -77,8 +83,8 @@ if ! gh api user -q .login >/dev/null 2>&1; then
   exit 1
 fi
 
-if [[ ! -f "${ITEMS_FILE}" || ! -f "${ONBOARDING_FILE}" ]]; then
-  echo "Error: required files missing. Run from repository root." >&2
+if [[ ! -f "${CATALOG_FILE}" ]]; then
+  echo "Error: guide catalog missing at .github/onboarding-items.json. Run from repository root." >&2
   exit 1
 fi
 
@@ -112,21 +118,24 @@ prompt_value() {
 }
 
 collect_project_info() {
-  if [[ "${DRY_RUN}" == true ]]; then
-    echo "Project setup (skipped in dry run):"
-    echo "  Project name: ${PROJECT_NAME:-<prompted>}"
-    echo "  Onboarding issue URL: ${ONBOARDING_ISSUE_URL:-<prompted>}"
-    echo "  Accepted date: ${ACCEPTED_DATE:-<prompted>}"
-    echo
-    return 0
-  fi
-
   echo "Project setup"
   echo "Press Enter to accept [default] values."
   echo
   prompt_value PROJECT_NAME "Project name" ""
-  prompt_value ONBOARDING_ISSUE_URL "Your CNCF onboarding issue URL (e.g. https://github.com/cncf/sandbox/issues/487)" ""
+  prompt_value ONBOARDING_ISSUE_URL "Your CNCF onboarding issue URL (required)" ""
   prompt_value ACCEPTED_DATE "TOC acceptance date (YYYY-MM-DD)" ""
+
+  if [[ -z "${ONBOARDING_ISSUE_URL}" ]]; then
+    echo "Error: --onboarding-issue-url is required so bootstrap can pull the live CNCF checklist." >&2
+    exit 1
+  fi
+
+  if [[ "${DRY_RUN}" == true ]]; then
+    echo
+    echo "Dry run: would write project metadata for ${PROJECT_NAME:-?} / ${ONBOARDING_ISSUE_URL}"
+    echo
+    return 0
+  fi
 
   local metadata
   metadata="$(jq -n \
@@ -139,6 +148,16 @@ collect_project_info() {
 
   export ROOT_DIR PROJECT_METADATA_JSON="${metadata}"
   python3 "${APPLY_METADATA}"
+  echo
+}
+
+pull_live_checklist() {
+  echo "Pulling live checklist from ${ONBOARDING_ISSUE_URL}..."
+  python3 "${FETCH_CHECKLIST}" \
+    --issue-url "${ONBOARDING_ISSUE_URL}" \
+    --catalog "${CATALOG_FILE}" \
+    --output "${ITEMS_FILE}"
+  python3 "${RENDER_ONBOARDING}" --items "${ITEMS_FILE}" --output "${ONBOARDING_FILE}"
   echo
 }
 
@@ -201,16 +220,16 @@ validate_checklist_order() {
   only_app="$(comm -13 "${items_file}" "${doc_file}" || true)"
   rm -f "${items_file}" "${doc_file}"
 
-  echo "Error: checklist slugs in ONBOARDING.md do not match .github/onboarding-items.json" >&2
+  echo "Error: checklist slugs in ONBOARDING.md do not match onboarding-items.generated.json" >&2
   if [[ -n "${only_map}" ]]; then
-    echo "  Present in onboarding-items.json but missing from ONBOARDING.md:" >&2
+    echo "  Present in generated checklist but missing from ONBOARDING.md:" >&2
     sed 's/^/    - /' <<< "${only_map}" >&2
   fi
   if [[ -n "${only_app}" ]]; then
-    echo "  Present in ONBOARDING.md but missing from onboarding-items.json:" >&2
+    echo "  Present in ONBOARDING.md but missing from generated checklist:" >&2
     sed 's/^/    - /' <<< "${only_app}" >&2
   fi
-  echo "  Fix: python3 scripts/render_onboarding_template.py (only if you haven't started tracking real issues yet)." >&2
+  echo "  Fix: re-run bootstrap, or: python3 scripts/render_onboarding_template.py --items .github/onboarding-items.generated.json" >&2
   exit 1
 }
 
@@ -273,6 +292,7 @@ build_issue_labels() {
 }
 
 collect_project_info
+pull_live_checklist
 flatten_items
 build_checklist_order
 validate_checklist_order
@@ -295,6 +315,7 @@ echo
 echo "{" > "${REGISTRY_TMP}"
 echo "  \"repository\": \"${REPO}\"," >> "${REGISTRY_TMP}"
 echo "  \"created_at\": \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\"," >> "${REGISTRY_TMP}"
+echo "  \"source_issue\": \"${ONBOARDING_ISSUE_URL}\"," >> "${REGISTRY_TMP}"
 echo "  \"issues\": {" >> "${REGISTRY_TMP}"
 
 first_entry=true
@@ -304,9 +325,16 @@ while IFS= read -r slug; do
   body="$(build_issue_body "${slug}")"
   placeholder="#ISSUE_$(echo "${slug}" | tr '[:lower:]-' '[:upper:]_')"
   body="${body//\#ISSUE_NUMBER/${placeholder}}"
+  already_checked="$(jq -r --arg s "${slug}" '
+    .categories[].items[] | select(.slug == $s) | .checked // false
+  ' "${ITEMS_FILE}" | head -n1)"
 
   if [[ "${DRY_RUN}" == true ]]; then
-    echo "[dry-run] Would create: ${title}"
+    if [[ "${already_checked}" == "true" ]]; then
+      echo "[dry-run] Would create (already checked on CNCF issue): ${title}"
+    else
+      echo "[dry-run] Would create: ${title}"
+    fi
     issue_number="0"
   else
     existing="$(gh issue list --label "checklist:${slug}" --state all --json number -q '.[0].number' 2>/dev/null || true)"
@@ -319,6 +347,14 @@ while IFS= read -r slug; do
       issue_number="${issue_url##*/}"
       echo "  -> #${issue_number}"
     fi
+
+    if [[ "${already_checked}" == "true" ]]; then
+      state="$(gh issue view "${issue_number}" --json state -q .state 2>/dev/null || true)"
+      if [[ "${state}" == "OPEN" ]]; then
+        gh issue close "${issue_number}" --comment "Already checked on the CNCF onboarding issue at bootstrap."
+        echo "  -> closed (already checked on CNCF issue)"
+      fi
+    fi
   fi
 
   if [[ "${first_entry}" == true ]]; then first_entry=false; else echo "," >> "${REGISTRY_TMP}"; fi
@@ -326,6 +362,9 @@ while IFS= read -r slug; do
 
   if [[ "${DRY_RUN}" == false ]]; then
     python3 "${TRACKING}" --root "${ROOT_DIR}" link-issue --slug "${slug}" --number "${issue_number}" --repo "${REPO}"
+    if [[ "${already_checked}" == "true" ]]; then
+      python3 "${TRACKING}" --root "${ROOT_DIR}" complete-checkbox --slug "${slug}"
+    fi
   fi
 done < "${SLUGS_FILE}"
 
@@ -335,7 +374,8 @@ echo "}" >> "${REGISTRY_TMP}"
 
 if [[ "${DRY_RUN}" == true ]]; then
   echo
-  echo "Dry run complete. No files modified."
+  echo "Dry run complete. Generated checklist written to ${ITEMS_FILE} and ${ONBOARDING_FILE}."
+  echo "No GitHub issues or registry were created."
   exit 0
 fi
 
@@ -345,9 +385,9 @@ trap - EXIT
 python3 "${TRACKING}" --root "${ROOT_DIR}" sync-readme
 
 echo
-echo "Updated ONBOARDING.md, README.md, and wrote ${REGISTRY_FILE}"
+echo "Updated ONBOARDING.md, README.md, ${ITEMS_FILE}, and wrote ${REGISTRY_FILE}"
 echo
 echo "Next steps:"
-echo "  git add ONBOARDING.md README.md .github/project-metadata.json .github/issue-registry.json"
+echo "  git add ONBOARDING.md README.md .github/project-metadata.json .github/issue-registry.json .github/onboarding-items.generated.json"
 echo "  git commit -m 'Bootstrap CNCF sandbox onboarding checklist issues'"
 echo "  git push"
