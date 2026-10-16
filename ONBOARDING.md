@@ -92,7 +92,7 @@ read it
 Read about [services available to CNCF projects](https://contribute.cncf.io/resources/project-services/).
 <!-- field-guide:end -->
 
-- [ ] Review services available for your project at the CNCF <!-- checklist:cncf-services-review --> (Issue: [#30](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/30))
+- [x] Review services available for your project at the CNCF <!-- checklist:cncf-services-review --> (Issue: [#30](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/30))
 
 **Evidence:**
 
@@ -214,7 +214,7 @@ Submit project artwork to [cncf/artwork](https://github.com/cncf/artwork). If yo
 If you use Google Analytics, add `projects@cncf.io` as an admin of your existing account so it can be moved to a CNCF-managed account. If you don't have GA, note your current analytics setup instead.
 <!-- field-guide:end -->
 
-- [ ] Transfer website analytics to the CNCF <!-- checklist:analytics-transfer --> (Issue: [#20](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/20))
+- [x] Transfer website analytics to the CNCF <!-- checklist:analytics-transfer --> (Issue: [#20](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/20))
 
 **Evidence:**
 
