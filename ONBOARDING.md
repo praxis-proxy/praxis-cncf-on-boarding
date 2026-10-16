@@ -340,7 +340,7 @@ These are completed by CNCF staff, not the project. Track them here so you know 
 CNCF staff adds the project to [DevStats](https://all.devstats.cncf.io/).
 <!-- field-guide:end -->
 
-- [ ] CNCF staff: add the project to DevStats <!-- checklist:devstats --> (Issue: [#10](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/10))
+- [x] CNCF staff: add the project to DevStats <!-- checklist:devstats --> (Issue: [#10](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/10))
 
 **Evidence:**
 
