@@ -240,11 +240,11 @@ https://github.com/praxis-proxy/.project
 Ensure each maintainer has an up-to-date [LFX Individual Dashboard profile](https://openprofile.dev/) with an active email address for mailing list and Service Desk access.
 <!-- field-guide:end -->
 
-- [ ] Ensure each maintainer has an up-to-date LFX Individual Dashboard profile <!-- checklist:lfx-profile --> (Issue: [#54](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/54))
+- [x] Ensure each maintainer has an up-to-date LFX Individual Dashboard profile <!-- checklist:lfx-profile --> (Issue: [#54](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/54))
 
 **Evidence:**
 
-_Notes or links here._
+All maintainers have been asked to ensure that their github IDs are linked.
 
 ### dco-enabled
 
