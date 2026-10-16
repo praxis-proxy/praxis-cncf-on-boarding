@@ -15,8 +15,8 @@ This repository helps you track and complete [CNCF Sandbox onboarding](https://g
 ## Onboarding progress
 
 <!-- checklist-progress:start -->
-> **Onboarding progress:** **25 / 37** items complete (68%)  
-> `██████████████░░░░░░` 68%
+> **Onboarding progress:** **26 / 37** items complete (70%)  
+> `██████████████░░░░░░` 70%
 <!-- checklist-progress:end -->
 
 ## Onboarding checklist
@@ -60,7 +60,7 @@ Each row links to the matching section in [ONBOARDING.md](ONBOARDING.md). A PR w
 - ✅ [CNCF staff: create project in CNCF Service Desk](ONBOARDING.md#cncf-service-desk) (Issue: [#55](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/55))
 - ✅ [CNCF staff: run Onboard Project workflow](ONBOARDING.md#onboard-project-workflow) (Issue: [#56](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/56))
 - ✅ [CNCF staff: add the project's groups.io list to maintainers@cncf.io](ONBOARDING.md#groupsio-maintainers-list) (Issue: [#3](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/3))
-- ⬜ [CNCF staff: send a welcome email confirming maintainer list access](ONBOARDING.md#welcome-email) (Issue: [#2](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/2))
+- ✅ [CNCF staff: send a welcome email confirming maintainer list access](ONBOARDING.md#welcome-email) (Issue: [#2](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/2))
 
 <!-- onboarding-dashboard:end -->
 

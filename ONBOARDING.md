@@ -460,7 +460,7 @@ _Notes or links here._
 CNCF staff sends a welcome email confirming maintainer mailing list and Service Desk access.
 <!-- field-guide:end -->
 
-- [ ] CNCF staff: send a welcome email confirming maintainer list access <!-- checklist:welcome-email --> (Issue: [#2](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/2))
+- [x] CNCF staff: send a welcome email confirming maintainer list access <!-- checklist:welcome-email --> (Issue: [#2](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/2))
 
 **Evidence:**
 
