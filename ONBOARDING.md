@@ -202,7 +202,7 @@ https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2?requestGroup=19
 Submit project artwork to [cncf/artwork](https://github.com/cncf/artwork). If you don't have artwork, CNCF can help design some.
 <!-- field-guide:end -->
 
-- [x] Submit a pull request with your artwork <!-- checklist:artwork-pr --> (Issue: [#21](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/21))
+- [x] Submit a pull request with your artwork <!-- checklist:artwork-pr --> (PR: [#62](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/62))
 
 **Evidence:**
 
