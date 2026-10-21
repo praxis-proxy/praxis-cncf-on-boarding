@@ -154,7 +154,7 @@ https://github.com/praxis-proxy
 CNCF will add `thelinuxfoundation` as an organization owner to ensure neutral hosting.
 <!-- field-guide:end -->
 
-- [x] Accept the invite to join the CNCF GitHub Enterprise account <!-- checklist:ghe-invite-accepted --> (Issue: [#25](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/25))
+- [x] Accept the invite to join the CNCF GitHub Enterprise account <!-- checklist:ghe-invite-accepted --> (PR: [#67](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/67))
 
 **Evidence:**
 
