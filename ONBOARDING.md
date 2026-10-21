@@ -401,7 +401,7 @@ _Notes or links here._
 CNCF staff adds the maintainers team to the chosen license scanner service (FOSSA or Snyk).
 <!-- field-guide:end -->
 
-- [ ] CNCF staff: add the maintainers team to the license scanner <!-- checklist:license-scanner-team --> (Issue: [#5](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/5))
+- [x] CNCF staff: add the maintainers team to the license scanner <!-- checklist:license-scanner-team --> (Issue: [#5](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/5))
 
 **Evidence:**
 
