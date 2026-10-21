@@ -324,11 +324,11 @@ Registered and passing (100%): https://www.bestpractices.dev/projects/13756
 Import all repos in scope into CNCF FOSSA or CNCF Snyk (see `license-policy-review`).
 <!-- field-guide:end -->
 
-- [ ] Import all project repos into a license scanning service <!-- checklist:license-scan-import --> (Issue: [#11](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/11))
+- [x] Import all project repos into a license scanning service <!-- checklist:license-scan-import --> (Issue: [#11](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/11))
 
 **Evidence:**
 
-_Notes or links here._
+[FOSSA Praxis Link](https://app.fossa.com/projects/git%2Bgithub.com%2Fpraxis-proxy%2Fpraxis?utm_source=share_link)
 
 ## CNCF staff tasks to support the project
 
