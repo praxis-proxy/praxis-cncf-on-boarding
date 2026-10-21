@@ -15,8 +15,8 @@ This repository helps you track and complete [CNCF Sandbox onboarding](https://g
 ## Onboarding progress
 
 <!-- checklist-progress:start -->
-> **Onboarding progress:** **34 / 37** items complete (92%)  
-> `██████████████████░░` 92%
+> **Onboarding progress:** **35 / 37** items complete (95%)  
+> `███████████████████░` 95%
 <!-- checklist-progress:end -->
 
 ## Onboarding checklist
@@ -33,7 +33,7 @@ Each row links to the matching section in [ONBOARDING.md](ONBOARDING.md). A PR w
 - ✅ [Review services available for your project at the CNCF](ONBOARDING.md#cncf-services-review) (PR: [#64](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/64))
 - ✅ [Review the online program guidelines](ONBOARDING.md#online-program-guidelines) (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
 - ✅ [Review the telemetry data collection and usage policy](ONBOARDING.md#telemetry-policy-review) (PR: [#60](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/60))
-- ⬜ [Optional: book time with CNCF staff](ONBOARDING.md#cncf-staff-office-hours) (Issue: [#27](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/27))
+- ✅ [Optional: book time with CNCF staff](ONBOARDING.md#cncf-staff-office-hours) (Issue: [#27](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/27))
 - ✅ [Move the project to its own separate neutral GitHub organization](ONBOARDING.md#neutral-github-org) (PR: [#38](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/38))
 - ✅ [Accept the invite to join the CNCF GitHub Enterprise account](ONBOARDING.md#ghe-invite-accepted) (PR: [#67](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/67))
 - ✅ [Migrate Slack channels to the Kubernetes or CNCF Slack workspace](ONBOARDING.md#slack-migration) (PR: [#41](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/41))
