@@ -15,8 +15,8 @@ This repository helps you track and complete [CNCF Sandbox onboarding](https://g
 ## Onboarding progress
 
 <!-- checklist-progress:start -->
-> **Onboarding progress:** **29 / 37** items complete (78%)  
-> `████████████████░░░░` 78%
+> **Onboarding progress:** **30 / 37** items complete (81%)  
+> `████████████████░░░░` 81%
 <!-- checklist-progress:end -->
 
 ## Onboarding checklist
@@ -49,7 +49,7 @@ Each row links to the matching section in [ONBOARDING.md](ONBOARDING.md). A PR w
 - ✅ [Start a GOVERNANCE.md documenting open governance](ONBOARDING.md#governance-doc) (PR: [#46](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/46))
 - ✅ [Start a SECURITY.md security policy](ONBOARDING.md#security-doc) (PR: [#45](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/45))
 - ✅ [Start an OpenSSF Best Practices Badge](ONBOARDING.md#openssf-badge) (PR: [#47](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/47))
-- ⬜ [Import all project repos into a license scanning service](ONBOARDING.md#license-scan-import) (Issue: [#11](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/11))
+- ✅ [Import all project repos into a license scanning service](ONBOARDING.md#license-scan-import) (PR: [#66](https://github.com/praxis-proxy/praxis-cncf-on-boarding/pull/66))
 - ✅ [CNCF staff: add the project to DevStats](ONBOARDING.md#devstats) (Issue: [#10](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/10))
 - ⬜ [CNCF staff: add the project to CLOMonitor](ONBOARDING.md#clomonitor) (Issue: [#9](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/9))
 - ⬜ [CNCF staff: add the project to LFX Insights](ONBOARDING.md#lfx-insights-onboarding) (Issue: [#8](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/8))
