@@ -389,7 +389,7 @@ _Notes or links here._
 After PCC activation, CNCF staff adds the project to the [Cloud Native Landscape](https://landscape.cncf.io/), including the `lfx_slug` in the landscape configuration file.
 <!-- field-guide:end -->
 
-- [ ] CNCF staff: add the project to the Cloud Native Landscape <!-- checklist:landscape-listing-onboarding --> (Issue: [#6](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/6))
+- [x] CNCF staff: add the project to the Cloud Native Landscape <!-- checklist:landscape-listing-onboarding --> (Issue: [#6](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/6))
 
 **Evidence:**
 
