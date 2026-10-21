@@ -353,7 +353,7 @@ _Notes or links here._
 CNCF staff adds the project to [CLOMonitor](https://clomonitor.io/).
 <!-- field-guide:end -->
 
-- [ ] CNCF staff: add the project to CLOMonitor <!-- checklist:clomonitor --> (Issue: [#9](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/9))
+- [x] CNCF staff: add the project to CLOMonitor <!-- checklist:clomonitor --> (Issue: [#9](https://github.com/praxis-proxy/praxis-cncf-on-boarding/issues/9))
 
 **Evidence:**
 
