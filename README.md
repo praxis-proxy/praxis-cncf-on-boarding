@@ -1,5 +1,7 @@
 # Praxis — CNCF Sandbox Onboarding
 
+## Praxis has completed the onboarding process to join the CNCF as a Sandbox project
+
 > **Project name:** Praxis
 >
 > **CNCF onboarding issue:** https://github.com/cncf/sandbox/issues/540
